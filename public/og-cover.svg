@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#1b110b"/>
+      <stop offset="56%" stop-color="#2b180d"/>
+      <stop offset="100%" stop-color="#4a250c"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.1" cy="0.1" r="0.7">
+      <stop offset="0%" stop-color="#fd6601" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#fd6601" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.92" cy="0.18" r="0.45">
+      <stop offset="0%" stop-color="#fdd16e" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#fdd16e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.16)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glowA)"/>
+  <rect width="1200" height="630" fill="url(#glowB)"/>
+
+  <g opacity="0.15">
+    <path d="M945 62h148c25 0 45 20 45 45v148c0 25-20 45-45 45H945c-25 0-45-20-45-45V107c0-25 20-45 45-45Z" fill="#fd6601"/>
+    <path d="M1001 121c38 0 70 11 98 32l-46 29c-16-11-31-16-52-16-49 0-82 33-82 76 0 44 33 76 82 76 21 0 36-4 52-15v-37h-46v-39h85v101c-28 24-66 37-108 37-83 0-144-55-144-123 0-68 61-121 144-121Z" fill="#fff7f0"/>
+  </g>
+
+  <rect x="70" y="70" width="92" height="92" rx="26" fill="#fd6601"/>
+  <path d="M104 95c22 0 41 6 57 19l-27 17c-9-6-18-9-30-9-29 0-48 19-48 43 0 25 19 44 48 44 12 0 21-2 30-8v-21H107v-22h50v58c-17 14-40 23-66 23-51 0-89-34-89-74 0-40 38-70 102-70Z" transform="translate(18 0) scale(0.78)" fill="#fffaf5"/>
+
+  <text x="70" y="248" font-family="Space Grotesk, Arial, sans-serif" font-size="66" font-weight="700" fill="#fff7f0">C Technology</text>
+  <text x="70" y="320" font-family="Manrope, Arial, sans-serif" font-size="30" fill="#f2d7bf">Enterprise technology for banks and financial institutions.</text>
+  <text x="70" y="382" font-family="Manrope, Arial, sans-serif" font-size="22" fill="#fdd16e">Core Banking • Digital Channels • Systems Integration • Infrastructure</text>
+
+  <g>
+    <rect x="70" y="438" width="300" height="108" rx="26" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="100" y="476" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700" fill="#fdd16e">Founded</text>
+    <text x="100" y="518" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff7f0">2015</text>
+    <text x="210" y="476" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700" fill="#fdd16e">Team</text>
+    <text x="210" y="518" font-family="Space Grotesk, Arial, sans-serif" font-size="34" font-weight="700" fill="#fff7f0">100+</text>
+  </g>
+
+  <g>
+    <rect x="818" y="402" width="302" height="148" rx="32" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.16"/>
+    <text x="850" y="447" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="700" fill="#fdd16e">Regional Presence</text>
+    <text x="850" y="492" font-family="Space Grotesk, Arial, sans-serif" font-size="32" font-weight="700" fill="#fff7f0">Bishkek + Istanbul</text>
+    <text x="850" y="528" font-family="Manrope, Arial, sans-serif" font-size="19" fill="#f2d7bf">Software solutions, banking infrastructure, and integration delivery for financial institutions.</text>
+  </g>
+</svg>

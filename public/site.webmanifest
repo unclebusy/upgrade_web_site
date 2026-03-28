@@ -1,0 +1,23 @@
+{
+  "name": "C Technology",
+  "short_name": "C Technology",
+  "description": "Enterprise banking technology for software delivery, systems integration, and infrastructure support.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff7f0",
+  "theme_color": "#fd6601",
+  "icons": [
+    {
+      "src": "/ctechnology-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/ctechnology-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
