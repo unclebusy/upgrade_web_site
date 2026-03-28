@@ -1,7 +1,11 @@
 type ContactPayload = {
   name: string;
+  workEmail: string;
   company: string;
-  email: string;
+  role: string;
+  country: string;
+  projectType: string;
+  timeline: string;
   message: string;
 };
 

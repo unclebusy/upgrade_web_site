@@ -28,9 +28,21 @@ export function ContactSection() {
               <p>{contact.details.office}</p>
             </div>
             <div>
+              <span>Address</span>
+              <p>{contact.details.address}</p>
+            </div>
+            <div>
               <span>{ui.email}</span>
               <p>
                 <AppLink href={`mailto:${contact.details.email}`}>{contact.details.email}</AppLink>
+              </p>
+            </div>
+            <div>
+              <span>Business email</span>
+              <p>
+                <AppLink href={`mailto:${contact.details.businessEmail}`}>
+                  {contact.details.businessEmail}
+                </AppLink>
               </p>
             </div>
             <div>
@@ -41,12 +53,21 @@ export function ContactSection() {
                 </AppLink>
               </p>
             </div>
+            <div>
+              <span>LinkedIn</span>
+              <p>
+                <AppLink href={contact.details.linkedin} target="_blank" rel="noreferrer">
+                  Company page
+                </AppLink>
+              </p>
+            </div>
           </div>
         </div>
         <div className="contact-card">
           <h3>{contact.formTitle}</h3>
           <p>{contact.formDescription}</p>
           <ContactForm />
+          <p className="contact-response">{contact.responseExpectation}</p>
           <div className="contact-next-steps">
             <p className="contact-next-steps__title">{contact.nextStepsTitle}</p>
             <ul className="contact-next-steps__list">

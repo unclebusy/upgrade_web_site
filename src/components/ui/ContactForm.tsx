@@ -20,8 +20,12 @@ export function ContactForm() {
     try {
       await submitContactForm({
         name: String(formData.get('name') ?? ''),
+        workEmail: String(formData.get('workEmail') ?? ''),
         company: String(formData.get('company') ?? ''),
-        email: String(formData.get('email') ?? ''),
+        role: String(formData.get('role') ?? ''),
+        country: String(formData.get('country') ?? ''),
+        projectType: String(formData.get('projectType') ?? ''),
+        timeline: String(formData.get('timeline') ?? ''),
         message: String(formData.get('message') ?? ''),
       });
 
@@ -57,16 +61,58 @@ export function ContactForm() {
           placeholder={contactForm.placeholders.company}
         />
       </label>
-      <label htmlFor="contact-email">
-        {contactForm.email}
+      <label htmlFor="contact-work-email">
+        {contactForm.workEmail}
         <input
-          id="contact-email"
+          id="contact-work-email"
           type="email"
-          name="email"
+          name="workEmail"
           placeholder={contactForm.placeholders.email}
           required
         />
       </label>
+      <div className="contact-form__grid">
+        <label htmlFor="contact-role">
+          {contactForm.role}
+          <input
+            id="contact-role"
+            type="text"
+            name="role"
+            placeholder={contactForm.placeholders.role}
+          />
+        </label>
+        <label htmlFor="contact-country">
+          {contactForm.country}
+          <input
+            id="contact-country"
+            type="text"
+            name="country"
+            placeholder={contactForm.placeholders.country}
+          />
+        </label>
+      </div>
+      <div className="contact-form__grid">
+        <label htmlFor="contact-project-type">
+          {contactForm.projectType}
+          <select id="contact-project-type" name="projectType" defaultValue={contactForm.projectTypeOptions[0]}>
+            {contactForm.projectTypeOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label htmlFor="contact-timeline">
+          {contactForm.timeline}
+          <select id="contact-timeline" name="timeline" defaultValue={contactForm.timelineOptions[0]}>
+            {contactForm.timelineOptions.map((option) => (
+              <option key={option} value={option}>
+                {option}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
       <label htmlFor="contact-message">
         {contactForm.message}
         <textarea

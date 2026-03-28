@@ -65,6 +65,31 @@ export type HeroContent = {
   image?: ImageAsset;
 };
 
+export type JumpLinkItem = {
+  label: string;
+  href: string;
+};
+
+export type JumpLinksContent = {
+  id: string;
+  items: JumpLinkItem[];
+};
+
+export type JourneyCard = {
+  title: string;
+  description: string;
+  outcome: string;
+  href: string;
+};
+
+export type JourneyContent = {
+  id: string;
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: JourneyCard[];
+};
+
 export type AboutContent = {
   id: string;
   eyebrow: string;
@@ -101,6 +126,19 @@ export type ServicesContent = {
   title: string;
   description: string;
   items: ServiceItem[];
+  lanes: Array<{
+    title: string;
+    description: string;
+    points: string[];
+  }>;
+  deliveryModel: {
+    eyebrow: string;
+    title: string;
+    steps: Array<{
+      title: string;
+      description: string;
+    }>;
+  };
 };
 
 export type AdvantageItem = {
@@ -117,9 +155,17 @@ export type AdvantagesContent = {
 };
 
 export type FeaturedSolutionItem = {
+  id: string;
   title: string;
+  value: string;
   description: string;
   category: string;
+  forWhom: string;
+  capabilities: string[];
+  useCases: string[];
+  integrations: string[];
+  outcomes: string[];
+  action: LinkAction;
 };
 
 export type SolutionsContent = {
@@ -127,6 +173,9 @@ export type SolutionsContent = {
   eyebrow: string;
   title: string;
   description: string;
+  ecosystemTitle: string;
+  ecosystemDescription: string;
+  ecosystemLayers: string[];
   lead: {
     title: string;
     description: string;
@@ -168,6 +217,12 @@ export type InfrastructureContent = PlaceholderSectionContent & {
 
 export type LogoSectionContent = PlaceholderSectionContent & {
   items: LogoItem[];
+  proofCards?: Array<{
+    title: string;
+    scope: string;
+    domain: string;
+    result: string;
+  }>;
 };
 
 export type TechStackGroup = {
@@ -186,13 +241,17 @@ export type FinalCtaContent = PlaceholderSectionContent & {
 export type ContactContent = PlaceholderSectionContent & {
   details: {
     office: string;
+    address: string;
     email: string;
+    businessEmail: string;
     phone: string;
+    linkedin: string;
   };
   formTitle: string;
   formDescription: string;
   nextStepsTitle: string;
   nextSteps: string[];
+  responseExpectation: string;
   image?: ImageAsset;
 };
 
@@ -226,16 +285,25 @@ export type UiContent = {
   phone: string;
   contactForm: {
     name: string;
+    workEmail: string;
     company: string;
+    role: string;
+    country: string;
+    projectType: string;
+    timeline: string;
     email: string;
     message: string;
     send: string;
     sending: string;
     success: string;
     error: string;
+    projectTypeOptions: string[];
+    timelineOptions: string[];
     placeholders: {
       name: string;
       company: string;
+      role: string;
+      country: string;
       email: string;
       message: string;
     };
@@ -256,6 +324,7 @@ export type HomePageContent = {
   siteMeta: SiteMeta;
   ui: UiContent;
   navigation: NavItem[];
+  jumpLinks: JumpLinksContent;
   pageIntros: {
     about: PageIntroContent;
     solutions: PageIntroContent;
@@ -269,6 +338,7 @@ export type HomePageContent = {
     caseStudies: PageIntroContent;
   };
   hero: HeroContent;
+  journeys: JourneyContent;
   about: AboutContent;
   metrics: MetricsContent;
   services: ServicesContent;
@@ -289,7 +359,15 @@ export type HomePageContent = {
   caseStudiesPage: PlaceholderSectionContent & {
     items: Array<
       ContentCardItem & {
+        category: string;
+        profile: string;
+        challenge: string;
+        solution: string;
+        scope: string[];
+        integrations: string[];
+        timeline: string;
         outcome: string;
+        metrics: string[];
         image?: ImageAsset;
       }
     >;
