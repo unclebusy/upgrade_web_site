@@ -9,12 +9,6 @@ export function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const contextualActiveMap: Record<string, string> = {
-    '/services': '/solutions',
-    '/case-studies': '/solutions',
-    '/industries': '/customers',
-  };
-
   const scrollToTopIfCurrentRoute = (href: string) => {
     if (location.pathname === href) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -42,17 +36,12 @@ export function Header() {
           </AppLink>
           <nav className="site-nav" aria-label="Primary navigation">
             {navigation.map((item) => {
-              const contextualHref = contextualActiveMap[location.pathname];
-              const isContextualActive = contextualHref === item.href;
-
               return (
                 <NavLink
                   key={item.href}
                   to={item.href}
                   onClick={() => scrollToTopIfCurrentRoute(item.href)}
-                  className={({ isActive }) =>
-                    `site-nav__link ${(isActive || isContextualActive) ? 'site-nav__link--active' : ''}`
-                  }
+                  className={({ isActive }) => `site-nav__link ${isActive ? 'site-nav__link--active' : ''}`}
                 >
                   {item.label}
                 </NavLink>
@@ -98,17 +87,12 @@ export function Header() {
         >
           <nav className="mobile-menu__section" aria-label="Mobile primary navigation">
             {navigation.map((item) => {
-              const contextualHref = contextualActiveMap[location.pathname];
-              const isContextualActive = contextualHref === item.href;
-
               return (
                 <NavLink
                   key={item.href}
                   to={item.href}
                   onClick={() => scrollToTopIfCurrentRoute(item.href)}
-                  className={({ isActive }) =>
-                    `mobile-menu__link ${(isActive || isContextualActive) ? 'mobile-menu__link--active' : ''}`
-                  }
+                  className={({ isActive }) => `mobile-menu__link ${isActive ? 'mobile-menu__link--active' : ''}`}
                 >
                   {item.label}
                 </NavLink>

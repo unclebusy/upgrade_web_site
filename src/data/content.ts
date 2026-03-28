@@ -53,10 +53,9 @@ const en: HomePageContent = {
   navigation: [
     { label: 'About', href: '/about' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Infrastructure', href: '/infrastructure' },
+    { label: 'Services', href: '/services' },
     { label: 'Customers', href: '/customers' },
-    { label: 'Partners', href: '/partners' },
-    { label: 'Technology', href: '/technology' },
+    { label: 'Industries', href: '/industries' },
     { label: 'Contact', href: '/contact' },
   ],
   pageIntros: {
@@ -155,27 +154,30 @@ const en: HomePageContent = {
   },
   hero: {
     eyebrow: 'Banking Technology Partner',
+    kicker: 'Banking software, systems integration, and infrastructure for institutions that cannot afford fragmented delivery.',
     title: 'Enterprise technology for banks and financial institutions.',
     description:
-      'C Technology builds and integrates secure banking software, digital channels, and infrastructure for institutions that need reliable growth, operational clarity, and scalable delivery.',
+      'C Technology helps banks modernize customer channels, core operations, and operational infrastructure with a delivery model built for regulated environments.',
     primaryAction: { label: 'Talk to our team', href: '/contact', variant: 'primary' },
-    secondaryAction: { label: 'Explore capabilities', href: '/solutions', variant: 'secondary' },
+    secondaryAction: { label: 'Review solutions', href: '/solutions', variant: 'secondary' },
     facts: [
       { label: 'Founded', value: '2015' },
-      { label: 'Bishkek HQ', value: 'Kyrgyzstan' },
-      { label: 'Istanbul Branch', value: 'Turkey' },
-      { label: 'Employees', value: '100+' },
+      { label: 'Regional hubs', value: '2' },
+      { label: 'Specialists', value: '100+' },
+      { label: 'Core capability areas', value: '5' },
     ],
     visualCard: {
       eyebrow: 'Focused Delivery',
+      signal: 'Built for regulated banking environments',
       title: 'Software, integration, and infrastructure with a banking-first lens.',
       description:
-        'We help banks modernize customer channels, core operations, and physical service infrastructure without creating fragmented stacks.',
+        'We align platform delivery, systems integration, and operational rollout so banks can modernize without creating disconnected workstreams.',
       items: [
         'Core and digital banking platforms',
         'Systems integration and consulting',
         'Infrastructure and hardware supply',
       ],
+      footerItems: ['Bishkek HQ', 'Istanbul branch', 'Enterprise delivery discipline'],
     },
     image: {
       src: '/images/hero-banking-operations.jpg.png',
@@ -496,7 +498,13 @@ const en: HomePageContent = {
       phone: '+996 312 00 00 00',
     },
     formTitle: 'Tell us what your institution is building.',
-    formDescription: 'We work with banks and financial organizations on software delivery, digital transformation, integration, and infrastructure programs.',
+    formDescription: 'Share the initiative, timeline, and delivery context. If the form is unavailable, use the direct email or phone contacts shown here.',
+    nextStepsTitle: 'What happens next',
+    nextSteps: [
+      'We review your request against the relevant software, integration, or infrastructure scope.',
+      'Our team replies with the right expert or a short discovery call proposal.',
+      'You get a concrete next step instead of a generic sales follow-up.',
+    ],
     image: {
       src: '/images/contact-office-map.jpg',
       alt: 'C Technology contact office and location visual.',
@@ -506,15 +514,17 @@ const en: HomePageContent = {
     brand: 'C Technology',
     description: 'Enterprise banking technology for software delivery, systems integration, and infrastructure support.',
     copyright: '© C Technology. All rights reserved.',
+    companyLabel: 'Company',
+    exploreLabel: 'Explore',
     links: [
       { label: 'About', href: '/about' },
       { label: 'Solutions', href: '/solutions' },
-      { label: 'Infrastructure', href: '/infrastructure' },
+      { label: 'Services', href: '/services' },
       { label: 'Contact', href: '/contact' },
     ],
     exploreLinks: [
       { label: 'Industries', href: '/industries' },
-      { label: 'Services', href: '/services' },
+      { label: 'Infrastructure', href: '/infrastructure' },
       { label: 'Case Studies', href: '/case-studies' },
     ],
   },
@@ -573,10 +583,9 @@ const ru: HomePageContent = {
   navigation: [
     { label: 'О компании', href: '/about' },
     { label: 'Решения', href: '/solutions' },
-    { label: 'Инфраструктура', href: '/infrastructure' },
+    { label: 'Сервисы', href: '/services' },
     { label: 'Клиенты', href: '/customers' },
-    { label: 'Партнёры', href: '/partners' },
-    { label: 'Технологии', href: '/technology' },
+    { label: 'Отрасли', href: '/industries' },
     { label: 'Контакты', href: '/contact' },
   ],
   pageIntros: {
@@ -655,27 +664,31 @@ const ru: HomePageContent = {
   hero: {
     ...en.hero,
     eyebrow: 'Технологический партнёр для банков',
-    title: 'Enterprise-технологии для банков и финансовых организаций.',
+    kicker: 'Банковское ПО, интеграция и инфраструктура для организаций, которым нельзя позволить себе разрозненную реализацию.',
+    title: 'Технологии для банков и финансовых организаций.',
     description:
-      'C Technology создаёт и интегрирует безопасное банковское ПО, цифровые каналы и инфраструктуру для организаций, которым нужны устойчивый рост, операционная прозрачность и масштабируемая реализация.',
+      'C Technology помогает банкам модернизировать клиентские каналы, core-операции и операционную инфраструктуру через модель поставки, рассчитанную на регулируемую среду.',
     primaryAction: { label: 'Связаться с командой', href: '/contact', variant: 'primary' },
-    secondaryAction: { label: 'Посмотреть решения', href: '/solutions', variant: 'secondary' },
+    secondaryAction: { label: 'Смотреть решения', href: '/solutions', variant: 'secondary' },
     facts: [
       { label: 'Основана', value: '2015' },
-      { label: 'Штаб-квартира', value: 'Бишкек' },
-      { label: 'Филиал', value: 'Стамбул' },
-      { label: 'Сотрудников', value: '100+' },
+      { label: 'Региональных хаба', value: '2' },
+      { label: 'Специалистов', value: '100+' },
+      { label: 'Ключевых направлений', value: '5' },
+      { label: 'Отраслевой фокус', value: 'Banking' },
     ],
     visualCard: {
       eyebrow: 'Фокус поставки',
+      signal: 'Рассчитано на банковскую и регулируемую среду',
       title: 'ПО, интеграция и инфраструктура с банковской отраслевой логикой.',
       description:
-        'Мы помогаем банкам модернизировать клиентские каналы, core-операции и физическую сервисную инфраструктуру без создания разрозненного стека.',
+        'Мы выстраиваем platform delivery, системную интеграцию и операционный rollout так, чтобы банк модернизировался без разрыва между командами и слоями.',
       items: [
         'Core и digital banking платформы',
         'Системная интеграция и консалтинг',
-        'Поставка инфраструктуры и оборудования',
+        'Инфраструктура и аппаратное обеспечение',
       ],
+      footerItems: ['Штаб-квартира Бишкек', 'Филиал Стамбул', 'Дисциплина enterprise delivery'],
     },
   },
   about: {
@@ -837,7 +850,13 @@ const ru: HomePageContent = {
     },
     formTitle: 'Расскажите, что строит ваша организация.',
     formDescription:
-      'Мы работаем с банками и финансовыми организациями над программными, трансформационными, интеграционными и инфраструктурными инициативами.',
+      'Опишите инициативу, сроки и контекст реализации. Если форма недоступна, используйте прямой email или телефон из этого блока.',
+    nextStepsTitle: 'Что произойдёт дальше',
+    nextSteps: [
+      'Мы сопоставим запрос с нужным программным, интеграционным или инфраструктурным направлением.',
+      'Команда вернётся с подходящим экспертом или предложением короткого discovery-звонка.',
+      'Вы получите конкретный следующий шаг, а не формальный sales-ответ.',
+    ],
   },
   customers: {
     ...en.customers,
@@ -935,17 +954,19 @@ const ru: HomePageContent = {
   },
   footer: {
     ...en.footer,
-    description: 'Enterprise-банковские технологии для поставки ПО, системной интеграции и инфраструктурной поддержки.',
+    description: 'Банковские технологии для поставки ПО, системной интеграции и инфраструктурной поддержки.',
     copyright: '© C Technology. Все права защищены.',
+    companyLabel: 'Компания',
+    exploreLabel: 'Дополнительно',
     links: [
       { label: 'О компании', href: '/about' },
       { label: 'Решения', href: '/solutions' },
-      { label: 'Инфраструктура', href: '/infrastructure' },
+      { label: 'Сервисы', href: '/services' },
       { label: 'Контакты', href: '/contact' },
     ],
     exploreLinks: [
       { label: 'Отрасли', href: '/industries' },
-      { label: 'Сервисы', href: '/services' },
+      { label: 'Инфраструктура', href: '/infrastructure' },
       { label: 'Кейсы', href: '/case-studies' },
     ],
   },

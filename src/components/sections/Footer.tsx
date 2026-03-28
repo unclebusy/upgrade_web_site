@@ -18,7 +18,7 @@ export function Footer() {
         </div>
         <div className="site-footer__links">
           <div className="site-footer__group">
-            <p className="site-footer__label">Company</p>
+            <p className="site-footer__label">{footer.companyLabel}</p>
             <nav className="site-footer__nav" aria-label="Footer navigation">
               {footer.links.map((item) => (
                 <AppLink key={item.href} href={item.href}>
@@ -27,9 +27,9 @@ export function Footer() {
               ))}
             </nav>
           </div>
-          {footer.exploreLinks ? (
+          {footer.exploreLinks && footer.exploreLabel ? (
             <div className="site-footer__group">
-              <p className="site-footer__label">Explore</p>
+              <p className="site-footer__label">{footer.exploreLabel}</p>
               <nav className="site-footer__nav site-footer__nav--secondary" aria-label="Explore navigation">
                 {footer.exploreLinks.map((item) => (
                   <AppLink key={item.href} href={item.href}>

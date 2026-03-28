@@ -46,14 +46,17 @@ export type HeroFact = {
 
 export type HeroVisualCard = {
   eyebrow: string;
+  signal: string;
   title: string;
   description: string;
   items: string[];
+  footerItems: string[];
 };
 
 export type HeroContent = {
   eyebrow: string;
   title: string;
+  kicker: string;
   description: string;
   primaryAction: LinkAction;
   secondaryAction: LinkAction;
@@ -188,6 +191,8 @@ export type ContactContent = PlaceholderSectionContent & {
   };
   formTitle: string;
   formDescription: string;
+  nextStepsTitle: string;
+  nextSteps: string[];
   image?: ImageAsset;
 };
 
@@ -195,6 +200,8 @@ export type FooterContent = {
   brand: string;
   description: string;
   copyright: string;
+  companyLabel: string;
+  exploreLabel?: string;
   links: NavItem[];
   exploreLinks?: NavItem[];
 };

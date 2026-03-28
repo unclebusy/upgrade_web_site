@@ -21,8 +21,7 @@ export function ServicesSection() {
             key={item.title}
             title={item.title}
             description={item.description}
-            variant={index === 0 ? 'feature' : index === 3 ? 'signal' : 'default'}
-            className={index === 0 ? 'services-grid__feature' : ''}
+            variant={index < 2 ? 'feature' : index === 3 ? 'signal' : 'default'}
           >
             <FeatureList items={item.points} />
           </InfoCard>

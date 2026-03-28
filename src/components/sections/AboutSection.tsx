@@ -5,7 +5,7 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 
 export function AboutSection() {
   const { content } = useSiteContent();
-  const { about, hero } = content;
+  const { about, hero, ui } = content;
 
   return (
     <SectionWrapper id={about.id}>
@@ -21,7 +21,7 @@ export function AboutSection() {
               <img src={about.image.src} alt={about.image.alt} />
             </div>
           ) : null}
-          <div className="about-facts" aria-label="C Technology operating footprint">
+          <div className="about-facts" aria-label={about.eyebrow}>
             {hero.facts.map((fact) => (
               <article key={fact.label} className="about-facts__item">
                 <span>{fact.label}</span>
@@ -35,7 +35,7 @@ export function AboutSection() {
             ))}
           </div>
           <div className="highlight-panel">
-            <p className="highlight-panel__title">Focus areas</p>
+            <p className="highlight-panel__title">{ui.capabilityArea}</p>
             <FeatureList items={about.highlights} />
           </div>
         </div>

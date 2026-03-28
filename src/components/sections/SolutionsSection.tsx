@@ -16,7 +16,7 @@ export function SolutionsSection() {
         description={solutions.description}
       />
       <div className="solutions-layout">
-        <div className="solutions-layout__lead editorial-stack">
+        <div className="solutions-layout__lead">
           <InfoCard
             title={solutions.lead.title}
             description={solutions.lead.description}
@@ -26,13 +26,6 @@ export function SolutionsSection() {
           >
             <FeatureList items={solutions.lead.points} />
           </InfoCard>
-          <div className="solutions-editorial-note">
-            <p className="eyebrow">Editorial View</p>
-            <p>
-              A modular portfolio that reads as one connected banking environment rather
-              than a list of disconnected products.
-            </p>
-          </div>
         </div>
         <div className="solutions-grid solutions-grid--editorial">
           {solutions.items.map((item, index) => (

@@ -13,13 +13,9 @@ export function HeroSection() {
         <div className="hero__content">
           <div className="hero__intro">
             <p className="eyebrow">{hero.eyebrow}</p>
-            <p className="hero__kicker">Banking software, systems integration, and infrastructure</p>
+            <p className="hero__kicker">{hero.kicker}</p>
           </div>
-          <h1 className="hero__title">
-            <span>Enterprise technology</span>
-            <span>for banks and</span>
-            <span>financial institutions.</span>
-          </h1>
+          <h1 className="hero__title">{hero.title}</h1>
           <p className="hero__description">{hero.description}</p>
           <CtaButtons actions={[hero.primaryAction, hero.secondaryAction]} />
           <div className="hero-facts" aria-label="Company trust facts">
@@ -40,15 +36,15 @@ export function HeroSection() {
           <div className="hero-panel">
             <div className="hero-panel__header">
               <p className="eyebrow">{hero.visualCard.eyebrow}</p>
-              <div className="hero-panel__signal">Banking-first delivery model</div>
+              <div className="hero-panel__signal">{hero.visualCard.signal}</div>
             </div>
             <h2>{hero.visualCard.title}</h2>
             <p>{hero.visualCard.description}</p>
             <FeatureList items={hero.visualCard.items} />
             <div className="hero-panel__footer">
-              <span>Bishkek HQ</span>
-              <span>Istanbul Branch</span>
-              <span>100+ specialists</span>
+              {hero.visualCard.footerItems.map((item) => (
+                <span key={item}>{item}</span>
+              ))}
             </div>
           </div>
         </aside>

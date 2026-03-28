@@ -1,4 +1,5 @@
 import { useSiteContent } from '../../context/SiteContentContext';
+import { AppLink } from '../ui/AppLink';
 import { ContactForm } from '../ui/ContactForm';
 import { SectionHeading } from '../ui/SectionHeading';
 import { SectionWrapper } from '../ui/SectionWrapper';
@@ -28,11 +29,17 @@ export function ContactSection() {
             </div>
             <div>
               <span>{ui.email}</span>
-              <p>{contact.details.email}</p>
+              <p>
+                <AppLink href={`mailto:${contact.details.email}`}>{contact.details.email}</AppLink>
+              </p>
             </div>
             <div>
               <span>{ui.phone}</span>
-              <p>{contact.details.phone}</p>
+              <p>
+                <AppLink href={`tel:${contact.details.phone.replace(/\s+/g, '')}`}>
+                  {contact.details.phone}
+                </AppLink>
+              </p>
             </div>
           </div>
         </div>
@@ -40,6 +47,14 @@ export function ContactSection() {
           <h3>{contact.formTitle}</h3>
           <p>{contact.formDescription}</p>
           <ContactForm />
+          <div className="contact-next-steps">
+            <p className="contact-next-steps__title">{contact.nextStepsTitle}</p>
+            <ul className="contact-next-steps__list">
+              {contact.nextSteps.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </SectionWrapper>

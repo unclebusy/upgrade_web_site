@@ -77,11 +77,15 @@ export function ContactForm() {
           required
         />
       </label>
-      <button type="submit" className="button button--primary">
+      <button type="submit" className="button button--primary" disabled={isSubmitting}>
         {isSubmitting ? contactForm.sending : contactForm.send}
       </button>
       {statusMessage ? (
-        <p className={`form-status form-status--${statusType ?? 'success'}`} role="status">
+        <p
+          className={`form-status form-status--${statusType ?? 'success'}`}
+          role="status"
+          aria-live="polite"
+        >
           {statusMessage}
         </p>
       ) : null}
