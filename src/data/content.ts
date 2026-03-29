@@ -9,7 +9,7 @@ const en: HomePageContent = {
   ui: {
     skipToContent: 'Skip to content',
     homeLabel: 'Home',
-    headerCta: 'Contact us',
+    headerCta: 'Book a call',
     brandTagline: 'Banking Technology',
     exploreLabel: 'Explore',
     menuLabel: 'Menu',
@@ -360,7 +360,7 @@ const en: HomePageContent = {
         useCases: ['Core modernization', 'Process consolidation', 'Platform standardization'],
         integrations: ['Digital channels', 'Payments', 'Notification layer'],
         outcomes: ['Reduced fragmentation', 'Cleaner operating model', 'Stronger rollout foundation'],
-        action: { label: 'Request walkthrough', href: '/contact', variant: 'ghost' },
+        action: { label: 'Request solution walkthrough', href: '/contact', variant: 'ghost' },
       },
       {
         id: 'digital-banking',
@@ -373,7 +373,7 @@ const en: HomePageContent = {
         useCases: ['Channel launch', 'Digital redesign', 'Customer self-service growth'],
         integrations: ['Core banking', 'Notifications', 'Remote onboarding'],
         outcomes: ['Faster rollout of customer channels', 'Better continuity across touchpoints', 'More consistent service delivery'],
-        action: { label: 'Request walkthrough', href: '/contact', variant: 'ghost' },
+        action: { label: 'Request solution walkthrough', href: '/contact', variant: 'ghost' },
       },
       {
         id: 'remote-onboarding',
@@ -386,7 +386,7 @@ const en: HomePageContent = {
         useCases: ['Digital account opening', 'Acquisition expansion', 'Faster KYC-facing journeys'],
         integrations: ['Core banking', 'Digital channels', 'Notification services'],
         outcomes: ['Faster onboarding', 'Wider acquisition reach', 'Less friction at the first step'],
-        action: { label: 'Request walkthrough', href: '/contact', variant: 'ghost' },
+        action: { label: 'Request solution walkthrough', href: '/contact', variant: 'ghost' },
       },
       {
         id: 'payments',
@@ -399,7 +399,7 @@ const en: HomePageContent = {
         useCases: ['Payment system integration', 'Enterprise reconciliation', 'Service expansion'],
         integrations: ['Card systems', 'ERP platforms', 'Core and reporting layers'],
         outcomes: ['Cleaner interoperability', 'More connected payment operations', 'Operational simplification'],
-        action: { label: 'Request walkthrough', href: '/contact', variant: 'ghost' },
+        action: { label: 'Request solution walkthrough', href: '/contact', variant: 'ghost' },
       },
       {
         id: 'notifications',
@@ -412,7 +412,7 @@ const en: HomePageContent = {
         useCases: ['Service notifications', 'Transactional alerts', 'Cross-channel messaging'],
         integrations: ['Digital channels', 'Core banking', 'Operational events'],
         outcomes: ['Consistent messaging', 'Faster service orchestration', 'Stronger customer trust'],
-        action: { label: 'Request walkthrough', href: '/contact', variant: 'ghost' },
+        action: { label: 'Request solution walkthrough', href: '/contact', variant: 'ghost' },
       },
     ],
   },
@@ -563,29 +563,29 @@ const en: HomePageContent = {
   trust: {
     id: 'trust',
     eyebrow: 'Governance & Trust',
-    title: 'Operational discipline that enterprise banking buyers expect.',
+    title: 'Why banks choose C Technology for regulated delivery programs.',
     description:
-      'This layer is designed to answer the reliability question before a project begins: how delivery is governed, how risk is reduced, and how support is handled.',
-    note: 'If formal certifications, SLAs, or security attestations apply, they can be attached here later without changing the section structure.',
+      'This section addresses the commercial risk question early: whether the team can govern delivery, control integration complexity, and support operational continuity after go-live.',
+    note: 'Formal certifications, SLAs, or security attestations can be added here later as the proof layer expands.',
     items: [
       {
         title: 'Regulated-environment delivery',
-        description: 'Programs are structured for financial institutions that operate under operational and governance constraints.',
-        points: ['Banking-first scoping', 'Controlled rollout planning', 'Operational continuity mindset'],
+        description: 'Programs are scoped for financial institutions where governance, service continuity, and implementation control matter from day one.',
+        points: ['Banking-first scoping', 'Controlled rollout planning', 'Regulated-environment execution'],
       },
       {
         title: 'Delivery governance',
-        description: 'Execution is framed as a governed program rather than a loose implementation effort.',
+        description: 'Execution is run as a governed delivery program rather than a loose vendor engagement.',
         points: ['Discovery-to-rollout ownership', 'Clear architecture decisions', 'Decision and dependency visibility'],
       },
       {
         title: 'Security and access discipline',
-        description: 'System work is approached with practical access control, integration boundaries, and service-risk awareness.',
+        description: 'System changes are handled with practical access control, integration boundaries, and risk awareness around critical banking services.',
         points: ['Role-aware implementation', 'Integration boundary control', 'Change discipline around critical systems'],
       },
       {
         title: 'Support model',
-        description: 'Post-launch service continuity matters as much as the initial delivery milestone.',
+        description: 'The engagement does not stop at implementation. Banks need a credible path from launch into support and iteration.',
         points: ['Go-live readiness', 'Structured handoff', 'Support and iteration path'],
       },
     ],
@@ -709,19 +709,19 @@ const en: HomePageContent = {
   },
   finalCta: {
     id: 'final-cta',
-    eyebrow: 'Get in Touch',
-    title: 'Build your next banking program with C Technology.',
-    description: 'Whether you are modernizing core operations, launching digital channels, or strengthening infrastructure, we can help shape a more connected banking environment.',
+    eyebrow: 'Next Step',
+    title: 'Talk to a banking solutions team that can scope the right program, not just sell a generic service.',
+    description: 'If you are evaluating core modernization, digital channels, onboarding, payments, or infrastructure delivery, we can help define the right first workstream and the right execution path.',
     actions: [
-      { label: 'Contact our team', href: '/contact', variant: 'primary' },
-      { label: 'Review services', href: '/solutions', variant: 'ghost' },
+      { label: 'Book a discovery call', href: '/contact', variant: 'primary' },
+      { label: 'Review banking solutions', href: '/solutions', variant: 'ghost' },
     ],
   },
   contact: {
     id: 'contact',
     eyebrow: 'Contact',
-    title: 'Start a conversation about your banking technology roadmap.',
-    description: 'Share your priorities across banking software, systems integration, digital channels, or infrastructure, and our team will get back to you with the right next step.',
+    title: 'Start a qualified conversation about your next banking technology initiative.',
+    description: 'Share your priorities across core banking, digital channels, onboarding, payments, systems integration, or infrastructure, and we will route the request to the right specialist.',
     details: {
       office: 'Bishkek HQ, Kyrgyzstan | Istanbul Branch, Turkey',
       address: 'Bishkek, Kyrgyz Republic | Istanbul, Turkey',
@@ -730,15 +730,15 @@ const en: HomePageContent = {
       phone: '+996 312 00 00 00',
       linkedin: 'https://www.linkedin.com/company/c-technology/',
     },
-    formTitle: 'Tell us what your institution is building.',
-    formDescription: 'Share the initiative, timeline, and delivery context. If the form is unavailable, use the direct email or phone contacts shown here.',
+    formTitle: 'Tell us what your institution needs to deliver.',
+    formDescription: 'Share the initiative, timeline, and delivery context. This helps us route your request to the right banking, integration, or infrastructure specialist from the start.',
     nextStepsTitle: 'What happens next',
     nextSteps: [
-      'We review your request against the relevant software, integration, or infrastructure scope.',
-      'Our team replies with the right expert or a short discovery call proposal.',
-      'You get a concrete next step instead of a generic sales follow-up.',
+      'We review the request against the relevant product, integration, or infrastructure scope.',
+      'A banking solutions specialist replies with the right expert or a short discovery call proposal.',
+      'If there is a fit, we align on the first workstream, key constraints, and the best next step.',
     ],
-    responseExpectation: 'A banking solutions specialist will reply within 1 business day. If relevant, we will schedule a short discovery call.',
+    responseExpectation: 'A banking solutions specialist will reply within 1 business day. If there is a fit, we will propose a short discovery call.',
     image: {
       src: '/images/contact-office-map.jpg',
       alt: 'C Technology contact office and location visual.',
@@ -775,7 +775,7 @@ const ru: HomePageContent = {
     ...en.ui,
       skipToContent: 'Перейти к содержимому',
       homeLabel: 'Главная',
-      headerCta: 'Связаться',
+      headerCta: 'Назначить звонок',
       brandTagline: 'Банковские технологии',
       exploreLabel: 'Дополнительно',
       menuLabel: 'Меню',
@@ -1215,9 +1215,9 @@ const ru: HomePageContent = {
   contact: {
     ...en.contact,
     eyebrow: 'Контакты',
-    title: 'Начните диалог о вашей банковской технологической roadmap.',
+    title: 'Начните предметный диалог о вашей следующей банковской технологической инициативе.',
     description:
-      'Расскажите о ваших приоритетах в области банковского ПО, системной интеграции, цифровых каналов или инфраструктуры, и наша команда предложит следующий шаг.',
+      'Опишите ваши приоритеты в core banking, цифровых каналах, onboarding, payments, системной интеграции или инфраструктуре, и мы направим запрос нужному специалисту.',
     details: {
       office: 'Штаб-квартира Бишкек, Кыргызстан | Филиал Стамбул, Турция',
       address: 'Бишкек, Кыргызская Республика | Стамбул, Турция',
@@ -1226,16 +1226,16 @@ const ru: HomePageContent = {
       phone: '+996 312 00 00 00',
       linkedin: 'https://www.linkedin.com/company/c-technology/',
     },
-    formTitle: 'Расскажите, что строит ваша организация.',
+    formTitle: 'Расскажите, что вашей организации нужно реализовать.',
     formDescription:
-      'Опишите инициативу, сроки и контекст реализации. Если форма недоступна, используйте прямой email или телефон из этого блока.',
+      'Опишите инициативу, сроки и контекст реализации. Так мы сразу передадим запрос нужному специалисту по банковским решениям, интеграции или инфраструктуре.',
     nextStepsTitle: 'Что произойдёт дальше',
     nextSteps: [
-      'Мы сопоставим запрос с нужным программным, интеграционным или инфраструктурным направлением.',
-      'Команда вернётся с подходящим экспертом или предложением короткого discovery-звонка.',
-      'Вы получите конкретный следующий шаг, а не формальный sales-ответ.',
+      'Мы сопоставим запрос с нужным продуктовым, интеграционным или инфраструктурным направлением.',
+      'Специалист по банковским решениям вернётся с нужным экспертом или предложением короткого discovery-звонка.',
+      'Если есть fit, мы согласуем первый workstream, ключевые ограничения и следующий шаг.',
     ],
-    responseExpectation: 'Специалист по банковским решениям ответит в течение 1 рабочего дня. Если тема релевантна, мы предложим короткий discovery call.',
+    responseExpectation: 'Специалист по банковским решениям ответит в течение 1 рабочего дня. Если есть fit, мы предложим короткий discovery call.',
   },
   customers: {
     ...en.customers,
@@ -1254,29 +1254,29 @@ const ru: HomePageContent = {
   trust: {
     ...en.trust,
     eyebrow: 'Governance & Trust',
-    title: 'Операционная дисциплина, которую ожидает enterprise buyer в банковской среде.',
+    title: 'Почему банки выбирают C Technology для delivery-программ в регулируемой среде.',
     description:
-      'Этот слой отвечает на вопрос надёжности ещё до старта проекта: как устроено delivery governance, как снижается риск и как выглядит модель поддержки.',
-    note: 'Если позже появятся формальные сертификации, SLA или security attestations, их можно встроить сюда без переделки структуры.',
+      'Этот блок заранее отвечает на коммерческий вопрос о риске: может ли команда управлять delivery, контролировать интеграционную сложность и поддерживать операционную устойчивость после go-live.',
+    note: 'Формальные сертификации, SLA или security attestations можно добавить сюда позже, не меняя структуру proof-layer.',
     items: [
       {
         title: 'Delivery в регулируемой среде',
-        description: 'Программы строятся под финансовые организации с жёсткими операционными и governance-ограничениями.',
-        points: ['Banking-first scoping', 'Контролируемое rollout-планирование', 'Фокус на непрерывности сервиса'],
+        description: 'Программы формируются под финансовые организации, где с первого дня важны governance, непрерывность сервиса и контроль внедрения.',
+        points: ['Banking-first scoping', 'Контролируемое rollout-планирование', 'Исполнение для регулируемой среды'],
       },
       {
         title: 'Delivery governance',
-        description: 'Исполнение проекта оформлено как управляемая программа, а не как набор несвязанных задач.',
+        description: 'Исполнение организовано как управляемая delivery-программа, а не как набор несвязанных vendor-задач.',
         points: ['Ownership от discovery до rollout', 'Ясные архитектурные решения', 'Видимость зависимостей и решений'],
       },
       {
         title: 'Security и access discipline',
-        description: 'Работа с системами ведётся с учётом доступа, границ интеграций и рисков для критичных сервисов.',
+        description: 'Изменения в системах ведутся с учётом доступа, границ интеграций и рисков вокруг критичных банковских сервисов.',
         points: ['Role-aware implementation', 'Контроль границ интеграций', 'Дисциплина изменений вокруг критичных систем'],
       },
       {
         title: 'Support model',
-        description: 'Непрерывность сервиса после go-live так же важна, как и сам запуск.',
+        description: 'Для банка путь после запуска так же важен, как и сам этап внедрения.',
         points: ['Go-live readiness', 'Структурированный handoff', 'Путь поддержки и следующих итераций'],
       },
     ],
@@ -1290,13 +1290,13 @@ const ru: HomePageContent = {
   },
   finalCta: {
     ...en.finalCta,
-    eyebrow: 'Связаться',
-    title: 'Реализуйте следующую банковскую технологическую программу вместе с C Technology.',
+    eyebrow: 'Следующий шаг',
+    title: 'Поговорите с командой банковских решений, которая поможет определить правильную программу, а не продаст абстрактный сервис.',
     description:
-      'Если вы модернизируете core-операции, запускаете цифровые каналы или усиливаете инфраструктуру, мы поможем сформировать более связанный банковский ландшафт.',
+      'Если вы оцениваете модернизацию core banking, цифровые каналы, onboarding, payments или инфраструктурную программу, мы поможем определить первый рабочий поток и реалистичный путь исполнения.',
     actions: [
-      { label: 'Связаться с командой', href: '/contact', variant: 'primary' },
-      { label: 'Посмотреть решения', href: '/solutions', variant: 'ghost' },
+      { label: 'Назначить discovery call', href: '/contact', variant: 'primary' },
+      { label: 'Посмотреть банковские решения', href: '/solutions', variant: 'ghost' },
     ],
   },
   industriesPage: {
