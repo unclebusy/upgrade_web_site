@@ -497,6 +497,15 @@ p {
 
 .page-intro__media {
   min-height: 24rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #fffaf6 0%, #fff2e8 100%);
+}
+
+.page-intro__media img {
+  object-fit: contain;
+  object-position: center;
 }
 
 .page-intro h1 {

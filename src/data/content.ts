@@ -107,7 +107,7 @@ const en: HomePageContent = {
       description:
         'Our software stack is structured to help banks modernize core operations, customer channels, onboarding, payment connectivity, and communication services without creating fragmented delivery tracks.',
       image: {
-        src: '/images/solutions-ecosystem-diagram.svg',
+        src: '/images/solutions-page-ecosystem.jpg',
         alt: 'Connected banking software ecosystem diagram.',
       },
     },
@@ -136,6 +136,10 @@ const en: HomePageContent = {
       title: 'Built for banks and financial institutions that need practical enterprise delivery.',
       description:
         'Our customer focus is rooted in institutions that require dependable software, integration, and infrastructure execution across regulated financial environments.',
+      image: {
+        src: '/images/industries-financial-services.jpg',
+        alt: 'Financial services environment representing the type of banks and institutions served by C Technology.',
+      },
     },
     partners: {
       eyebrow: 'Partners',
@@ -149,7 +153,7 @@ const en: HomePageContent = {
       description:
         'We approach platforms, integration layers, and infrastructure with an enterprise mindset suited for financial institutions and staged transformation programs.',
       image: {
-        src: '/images/technology-architecture-grid.svg',
+        src: '/images/technology-page-architecture.jpg',
         alt: 'Structured banking technology architecture grid.',
       },
     },
@@ -169,7 +173,7 @@ const en: HomePageContent = {
       description:
         'Our service layer helps institutions move from strategy to implementation with clearer architecture, stronger integration discipline, and more dependable rollout planning.',
       image: {
-        src: '/images/services-delivery-diagram.svg',
+        src: '/images/services-page-consulting.jpg',
         alt: 'Banking delivery and operational enablement diagram.',
       },
     },
@@ -212,7 +216,7 @@ const en: HomePageContent = {
       footerItems: ['Core layer', 'Digital channels', 'Integration + infrastructure'],
     },
     image: {
-      src: '/images/hero-banking-system.svg',
+      src: '/images/hero-banking-operations.jpg.png',
       alt: 'Banking systems diagram showing connected product, integration, and infrastructure layers.',
     },
   },
