@@ -386,21 +386,39 @@ p {
 }
 
 .jump-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid rgba(253, 102, 1, 0.08);
+  border-radius: calc(var(--radius-md) + 0.2rem);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 248, 242, 0.98));
+  box-shadow: 0 16px 38px rgba(78, 38, 8, 0.06);
 }
 
 .jump-links__item {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   min-height: 2.75rem;
   padding: 0.65rem 0.95rem;
-  border-radius: 999px;
-  border: 1px solid rgba(253, 102, 1, 0.12);
-  background: rgba(255, 255, 255, 0.76);
+  border-radius: 1rem;
+  border: 1px solid rgba(253, 102, 1, 0.1);
+  background: rgba(255, 255, 255, 0.88);
   color: var(--color-text);
   font-weight: 700;
+  text-align: center;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.jump-links__item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(253, 102, 1, 0.18);
+  box-shadow: 0 14px 28px rgba(93, 44, 8, 0.08);
 }
 
 .hero::before {
@@ -807,6 +825,10 @@ p {
   line-height: 1.55;
 }
 
+.proof-card strong {
+  color: var(--color-primary-strong);
+}
+
 .journey-card {
   display: grid;
   gap: 0.9rem;
@@ -856,6 +878,7 @@ p {
   display: grid;
   justify-items: center;
   text-align: center;
+  align-content: start;
 }
 
 .metric-card h3 {
@@ -960,8 +983,13 @@ p {
 .solutions-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
-  gap: 1.5rem;
+  gap: 1.85rem;
   align-items: start;
+}
+
+.solutions-layout__lead {
+  display: grid;
+  gap: 1.25rem;
 }
 
 .solution-cards {
@@ -978,6 +1006,10 @@ p {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 247, 240, 0.98));
   box-shadow: 0 16px 38px rgba(78, 38, 8, 0.08);
+}
+
+.solution-card .button {
+  justify-self: start;
 }
 
 .solution-card__toggle {
@@ -998,9 +1030,24 @@ p {
   gap: 1rem;
 }
 
+.solution-card__header {
+  padding-bottom: 0.2rem;
+}
+
 .solution-card__body {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   padding-top: 0.25rem;
+  border-top: 1px solid rgba(253, 102, 1, 0.08);
+}
+
+.solution-card__body > div {
+  display: grid;
+  gap: 0.65rem;
+  align-content: start;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(253, 102, 1, 0.06);
 }
 
 .solution-card__label,
@@ -1050,6 +1097,11 @@ p {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
   gap: 2rem;
   align-items: start;
+}
+
+.contact-layout__info {
+  display: grid;
+  align-content: start;
 }
 
 .solutions-grid {
@@ -1433,6 +1485,15 @@ p {
     box-shadow 220ms ease;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 24px 58px rgba(78, 38, 8, 0.1);
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-gold));
 }
 
 .contact-response {
@@ -1596,6 +1657,10 @@ p {
 
 .contact-card p {
   margin-bottom: 1.25rem;
+}
+
+.contact-card > p:first-of-type {
+  max-width: 48ch;
 }
 
 .contact-details {
@@ -1789,6 +1854,10 @@ p {
     gap: 0.85rem;
   }
 
+  .jump-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .hero__grid,
   .page-intro__layout--media,
   .split-layout,
@@ -1881,6 +1950,18 @@ p {
   .jump-links-section {
     padding-top: 0.9rem;
     padding-bottom: 1rem;
+  }
+
+  .jump-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+    padding: 0.85rem;
+  }
+
+  .jump-links__item {
+    min-height: 2.9rem;
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
   }
 
   h1 {

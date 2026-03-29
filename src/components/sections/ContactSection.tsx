@@ -15,7 +15,7 @@ export function ContactSection() {
   return (
     <SectionWrapper id={contact.id} surface="muted">
       <div className="contact-layout">
-        <div>
+        <div className="contact-layout__info">
           <SectionHeading
             eyebrow={contact.eyebrow}
             title={contact.title}

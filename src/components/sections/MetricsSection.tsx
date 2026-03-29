@@ -8,7 +8,7 @@ export function MetricsSection() {
   const { metrics } = content;
 
   return (
-    <SectionWrapper id={metrics.id} surface="muted">
+    <SectionWrapper id={metrics.id}>
       <SectionHeading
         eyebrow={metrics.eyebrow}
         title={metrics.title}
