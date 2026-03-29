@@ -217,11 +217,14 @@ export type InfrastructureContent = PlaceholderSectionContent & {
 
 export type LogoSectionContent = PlaceholderSectionContent & {
   items: LogoItem[];
+  proofIntro?: string;
   proofCards?: Array<{
     title: string;
+    clientType: string;
     scope: string;
     domain: string;
     result: string;
+    metrics: string[];
   }>;
 };
 
@@ -373,10 +376,13 @@ export type HomePageContent = {
     items: ContentCardItem[];
   };
   caseStudiesPage: PlaceholderSectionContent & {
+    proofIntro?: string;
+    ctaLabel?: string;
     items: Array<
       ContentCardItem & {
         category: string;
         profile: string;
+        buyerContext?: string;
         challenge: string;
         solution: string;
         scope: string[];

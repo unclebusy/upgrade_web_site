@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useSiteContent } from '../../context/SiteContentContext';
+import { AppLink } from '../ui/AppLink';
 import { SectionHeading } from '../ui/SectionHeading';
 import { SectionWrapper } from '../ui/SectionWrapper';
 
@@ -45,6 +46,7 @@ export function CaseStudiesSection() {
         title={caseStudiesPage.title}
         description={caseStudiesPage.description}
       />
+      {caseStudiesPage.proofIntro ? <p className="case-library__intro">{caseStudiesPage.proofIntro}</p> : null}
       <div className="case-filters" aria-label="Case study filters">
         {categories.map((category) => (
           <button
@@ -71,6 +73,7 @@ export function CaseStudiesSection() {
                 <h3>{item.title}</h3>
                 <p className="case-card__profile">{item.profile}</p>
                 <p>{item.description}</p>
+                {item.buyerContext ? <p className="case-card__context">{item.buyerContext}</p> : null}
               </div>
               <div className="case-card__grid">
                 <div>
@@ -111,6 +114,11 @@ export function CaseStudiesSection() {
                   <span key={metric}>{metric}</span>
                 ))}
               </div>
+              {caseStudiesPage.ctaLabel ? (
+                <AppLink href="/contact" className="button button--ghost">
+                  {caseStudiesPage.ctaLabel}
+                </AppLink>
+              ) : null}
             </div>
           </article>
         ))}

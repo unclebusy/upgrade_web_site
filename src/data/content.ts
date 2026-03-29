@@ -517,6 +517,7 @@ const en: HomePageContent = {
     eyebrow: 'Customers',
     title: 'Customer logos supported by concrete proof of delivery scope.',
     description: 'Use logos as recognition, then add short proof cards so buyers can see what kind of work these relationships imply.',
+    proofIntro: 'These examples are intentionally framed as buyer-facing proof: type of institution, project scope, business domain, and operational result.',
     items: [
       { name: 'DemirBank', src: '/logos/customers/customer-demirbank.svg', alt: 'DemirBank logo' },
       { name: 'FINCA Bank', src: '/logos/customers/customer-finca-bank.svg', alt: 'FINCA Bank logo' },
@@ -530,21 +531,27 @@ const en: HomePageContent = {
     proofCards: [
       {
         title: 'Regional bank',
+        clientType: 'Bank',
         scope: 'Core modernization + digital channels',
         domain: 'Retail banking',
         result: 'Improved service continuity and cleaner alignment between backend and channels.',
+        metrics: ['Core + channel scope', 'Retail service model', 'Continuity improved'],
       },
       {
         title: 'Financial institution',
+        clientType: 'Financial institution',
         scope: 'Remote onboarding + notification workflows',
         domain: 'Customer acquisition',
         result: 'Faster onboarding and less fragmentation at the first customer touchpoint.',
+        metrics: ['Remote onboarding scope', 'First-touch optimization', 'Faster activation path'],
       },
       {
         title: 'Enterprise banking environment',
+        clientType: 'Banking environment',
         scope: 'Payments + system integrations',
         domain: 'Operational interoperability',
         result: 'More connected payment operations across banking and business systems.',
+        metrics: ['Payments + integration scope', 'Cross-system operations', 'Cleaner interoperability'],
       },
     ],
   },
@@ -640,6 +647,8 @@ const en: HomePageContent = {
     title: 'Case studies structured for enterprise banking buyers.',
     description:
       'Each case is framed around client profile, challenge, solution, integrations, timing, and measurable operational outcomes.',
+    proofIntro: 'Use these cases to evaluate delivery fit: client profile, business pressure, solution path, integration footprint, and what changed operationally.',
+    ctaLabel: 'Discuss a similar program',
     items: [
       {
         category: 'Core Banking',
@@ -647,6 +656,7 @@ const en: HomePageContent = {
         profile: 'Regional bank',
         description:
           'A bank needs to improve operational consistency and prepare its core environment for connected digital services.',
+        buyerContext: 'Best fit for banks preparing the core layer before digital expansion.',
         challenge: 'Operational logic and service workflows are too fragmented for clean expansion into digital channels.',
         solution: 'Reframe the core environment as the operating backbone, then align delivery and rollout around that target state.',
         scope: ['Core assessment', 'Process alignment', 'Rollout planning'],
@@ -665,6 +675,7 @@ const en: HomePageContent = {
         profile: 'Growth-stage bank',
         description:
           'An institution is launching mobile and internet banking while reducing fragmentation between customer channels and backend systems.',
+        buyerContext: 'Relevant for institutions where channel growth is outpacing backend coordination.',
         challenge: 'Customer-facing channels are moving faster than the bank can align core operations and supporting services.',
         solution: 'Launch mobile and internet banking through one coordinated program connected to core workflows and service messaging.',
         scope: ['Channel delivery', 'Integration mapping', 'Customer journey rollout'],
@@ -683,6 +694,7 @@ const en: HomePageContent = {
         profile: 'Financial institution',
         description:
           'A financial organization wants to reduce branch dependency and support faster remote onboarding flows.',
+        buyerContext: 'Useful when acquisition targets require lower branch dependency and cleaner activation flows.',
         challenge: 'First-touch journeys create too much friction and slow down account activation.',
         solution: 'Deploy digital-first onboarding with tighter coordination between acquisition flows, core services, and messaging.',
         scope: ['Onboarding journey design', 'System integration', 'Activation workflow'],
@@ -697,6 +709,7 @@ const en: HomePageContent = {
         profile: 'Multi-location bank',
         description:
           'A bank is strengthening self-service access, branch equipment, and supporting server environments across locations.',
+        buyerContext: 'Relevant for banks coordinating service continuity across multiple locations and operating environments.',
         challenge: 'Operational readiness varies across locations, increasing risk to service continuity.',
         solution: 'Run an infrastructure program that coordinates equipment rollout, operational enablement, and backend readiness.',
         scope: ['Infrastructure supply', 'Site rollout', 'Operational enablement'],
@@ -1251,6 +1264,33 @@ const ru: HomePageContent = {
     title: 'Логотипы клиентов, усиленные короткими proof-карточками.',
     description:
       'Логотипы дают узнавание, а proof-карточки показывают, какой тип проектного объёма стоит за этими отношениями.',
+    proofIntro: 'Эти примеры намеренно поданы в buyer-friendly формате: тип организации, масштаб проекта, домен применения и операционный результат.',
+    proofCards: [
+      {
+        title: 'Региональный банк',
+        clientType: 'Банк',
+        scope: 'Core modernization + digital channels',
+        domain: 'Розничный банкинг',
+        result: 'Более устойчивая сервисная модель и чище выстроенная связка между backend и каналами.',
+        metrics: ['Core + channel scope', 'Retail service model', 'Continuity improved'],
+      },
+      {
+        title: 'Финансовая организация',
+        clientType: 'Финансовая организация',
+        scope: 'Remote onboarding + notification workflows',
+        domain: 'Привлечение клиентов',
+        result: 'Более быстрое onboarding-подключение и меньше разрывов на первом клиентском касании.',
+        metrics: ['Remote onboarding scope', 'First-touch optimization', 'Faster activation path'],
+      },
+      {
+        title: 'Банковая операционная среда',
+        clientType: 'Банковая среда',
+        scope: 'Payments + system integrations',
+        domain: 'Операционная совместимость',
+        result: 'Более связная платежная модель между банковыми и бизнес-системами.',
+        metrics: ['Payments + integration scope', 'Cross-system operations', 'Cleaner interoperability'],
+      },
+    ],
   },
   partners: {
     ...en.partners,
@@ -1342,12 +1382,15 @@ const ru: HomePageContent = {
     title: 'Кейсы в формате, который помогает senior buyer оценить масштаб и применимость.',
     description:
       'Кейсы собраны как library: профиль клиента, контекст, решение, интеграции, сроки и measurable outcomes.',
+    proofIntro: 'Эти кейсы помогают оценить delivery fit: профиль клиента, бизнес-давление, путь решения, интеграционный контур и операционные изменения на выходе.',
+    ctaLabel: 'Обсудить похожую программу',
     items: [
       {
         category: 'Core Banking',
         title: 'Модернизация core для регионального банка',
         profile: 'Regional bank',
         description: 'Подготовить core-среду к связанным цифровым сервисам и снизить операционную разрозненность.',
+        buyerContext: 'Подходит банкам, которым сначала нужно укрепить core-слой перед расширением digital channels.',
         challenge: 'Фрагментированные процессы и слабая готовность core к расширению каналов.',
         solution: 'Скоординированная core modernization с подготовкой к интеграции цифровых и payment-слоёв.',
         scope: ['Core assessment', 'Process alignment', 'Rollout planning'],
@@ -1361,6 +1404,7 @@ const ru: HomePageContent = {
         title: 'Запуск digital channels для банка роста',
         profile: 'Growth-stage bank',
         description: 'Запустить mobile и internet banking без разрыва между клиентскими каналами и backend-системами.',
+        buyerContext: 'Релевантно организациям, где рост каналов уже опережает готовность backend и integration layer.',
         challenge: 'Каналы развивались быстрее, чем core и integration layer.',
         solution: 'Единая программа запуска customer channels с интеграцией в core и service messaging.',
         scope: ['Channel delivery', 'Integration mapping', 'Customer journey rollout'],
@@ -1374,6 +1418,7 @@ const ru: HomePageContent = {
         title: 'Remote acquisition для снижения branch dependency',
         profile: 'Financial institution',
         description: 'Снизить зависимость от отделений и ускорить удалённый onboarding.',
+        buyerContext: 'Полезно, когда цели по привлечению требуют меньшей зависимости от branch-first модели и более чистой активации.',
         challenge: 'Высокое трение на первом клиентском шаге и ограниченная масштабируемость branch-first модели.',
         solution: 'Digital-first onboarding flow с customer activation и связью с core и notification stack.',
         scope: ['Onboarding journey design', 'System integration', 'Activation workflow'],
@@ -1387,6 +1432,7 @@ const ru: HomePageContent = {
         title: 'Инфраструктурная программа для self-service сети',
         profile: 'Multi-location bank',
         description: 'Усилить self-service доступ, branch equipment и supporting server environments.',
+        buyerContext: 'Релевантно банкам, координирующим service continuity между несколькими локациями и операционными средами.',
         challenge: 'Неравномерная готовность площадок и риск для service continuity.',
         solution: 'Infrastructure rollout с операционной координацией и поддержкой branch environments.',
         scope: ['Infrastructure supply', 'Site rollout', 'Operational enablement'],
