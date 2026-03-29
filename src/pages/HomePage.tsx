@@ -6,6 +6,7 @@ import { HeroSection } from '../components/sections/HeroSection';
 import { HomeJumpLinksSection } from '../components/sections/HomeJumpLinksSection';
 import { MetricsSection } from '../components/sections/MetricsSection';
 import { CaseStudiesSection } from '../components/sections/CaseStudiesSection';
+import { TrustSection } from '../components/sections/TrustSection';
 import { AdvantagesSection } from '../components/sections/AdvantagesSection';
 import { ServicesSection } from '../components/sections/ServicesSection';
 import { SolutionsSection } from '../components/sections/SolutionsSection';
@@ -21,6 +22,7 @@ export function HomePage() {
       <SolutionsSection />
       <ServicesSection />
       <CustomersSection />
+      <TrustSection />
       <CaseStudiesSection />
       <FinalCtaSection />
       <ContactSection />

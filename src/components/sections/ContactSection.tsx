@@ -5,8 +5,12 @@ import { SectionHeading } from '../ui/SectionHeading';
 import { SectionWrapper } from '../ui/SectionWrapper';
 
 export function ContactSection() {
-  const { content } = useSiteContent();
+  const { content, locale } = useSiteContent();
   const { contact, ui } = content;
+  const addressLabel = locale === 'ru' ? 'Адрес' : 'Address';
+  const businessEmailLabel = locale === 'ru' ? 'Деловой email' : 'Business email';
+  const linkedInLabel = 'LinkedIn';
+  const companyPageLabel = locale === 'ru' ? 'Страница компании' : 'Company page';
 
   return (
     <SectionWrapper id={contact.id} surface="muted">
@@ -28,7 +32,7 @@ export function ContactSection() {
               <p>{contact.details.office}</p>
             </div>
             <div>
-              <span>Address</span>
+              <span>{addressLabel}</span>
               <p>{contact.details.address}</p>
             </div>
             <div>
@@ -38,7 +42,7 @@ export function ContactSection() {
               </p>
             </div>
             <div>
-              <span>Business email</span>
+              <span>{businessEmailLabel}</span>
               <p>
                 <AppLink href={`mailto:${contact.details.businessEmail}`}>
                   {contact.details.businessEmail}
@@ -54,10 +58,10 @@ export function ContactSection() {
               </p>
             </div>
             <div>
-              <span>LinkedIn</span>
+              <span>{linkedInLabel}</span>
               <p>
                 <AppLink href={contact.details.linkedin} target="_blank" rel="noreferrer">
-                  Company page
+                  {companyPageLabel}
                 </AppLink>
               </p>
             </div>

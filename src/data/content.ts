@@ -14,6 +14,8 @@ const en: HomePageContent = {
     exploreLabel: 'Explore',
     menuLabel: 'Menu',
     closeLabel: 'Close',
+    showDetails: 'Show details',
+    hideDetails: 'Hide details',
     whyItMatters: 'Why it matters',
     portfolioLogic: 'Portfolio logic',
     hardwareCapability: 'Hardware capability',
@@ -558,6 +560,36 @@ const en: HomePageContent = {
       { name: 'Dell', src: '/logos/partners/partner-dell.svg', alt: 'Dell logo' },
     ],
   },
+  trust: {
+    id: 'trust',
+    eyebrow: 'Governance & Trust',
+    title: 'Operational discipline that enterprise banking buyers expect.',
+    description:
+      'This layer is designed to answer the reliability question before a project begins: how delivery is governed, how risk is reduced, and how support is handled.',
+    note: 'If formal certifications, SLAs, or security attestations apply, they can be attached here later without changing the section structure.',
+    items: [
+      {
+        title: 'Regulated-environment delivery',
+        description: 'Programs are structured for financial institutions that operate under operational and governance constraints.',
+        points: ['Banking-first scoping', 'Controlled rollout planning', 'Operational continuity mindset'],
+      },
+      {
+        title: 'Delivery governance',
+        description: 'Execution is framed as a governed program rather than a loose implementation effort.',
+        points: ['Discovery-to-rollout ownership', 'Clear architecture decisions', 'Decision and dependency visibility'],
+      },
+      {
+        title: 'Security and access discipline',
+        description: 'System work is approached with practical access control, integration boundaries, and service-risk awareness.',
+        points: ['Role-aware implementation', 'Integration boundary control', 'Change discipline around critical systems'],
+      },
+      {
+        title: 'Support model',
+        description: 'Post-launch service continuity matters as much as the initial delivery milestone.',
+        points: ['Go-live readiness', 'Structured handoff', 'Support and iteration path'],
+      },
+    ],
+  },
   techStack: {
     id: 'tech-stack',
     eyebrow: 'Technology Stack',
@@ -748,6 +780,8 @@ const ru: HomePageContent = {
       exploreLabel: 'Дополнительно',
       menuLabel: 'Меню',
       closeLabel: 'Закрыть',
+      showDetails: 'Показать детали',
+      hideDetails: 'Скрыть детали',
       whyItMatters: 'Почему это важно',
     portfolioLogic: 'Логика портфеля',
     hardwareCapability: 'Инфраструктурное направление',
@@ -1216,6 +1250,36 @@ const ru: HomePageContent = {
     title: 'Партнёрская модель на стыке delivery, интеграции и технологических экосистем.',
     description:
       'Мы работаем в тесной связке с банками, технологическими вендорами, интеграционными участниками и enterprise-командами, которым нужна согласованность между несколькими системами и сервисными слоями.',
+  },
+  trust: {
+    ...en.trust,
+    eyebrow: 'Governance & Trust',
+    title: 'Операционная дисциплина, которую ожидает enterprise buyer в банковской среде.',
+    description:
+      'Этот слой отвечает на вопрос надёжности ещё до старта проекта: как устроено delivery governance, как снижается риск и как выглядит support model.',
+    note: 'Если позже появятся формальные certifications, SLA или security attestations, их можно встроить сюда без переделки структуры.',
+    items: [
+      {
+        title: 'Delivery в регулируемой среде',
+        description: 'Программы строятся под финансовые организации с жёсткими операционными и governance-ограничениями.',
+        points: ['Banking-first scoping', 'Контролируемое rollout-планирование', 'Фокус на service continuity'],
+      },
+      {
+        title: 'Delivery governance',
+        description: 'Исполнение проекта оформлено как управляемая программа, а не как набор несвязанных задач.',
+        points: ['Ownership от discovery до rollout', 'Ясные архитектурные решения', 'Видимость зависимостей и решений'],
+      },
+      {
+        title: 'Security и access discipline',
+        description: 'Работа с системами ведётся с учётом доступа, границ интеграций и рисков для критичных сервисов.',
+        points: ['Role-aware implementation', 'Контроль integration boundaries', 'Дисциплина изменений вокруг критичных систем'],
+      },
+      {
+        title: 'Support model',
+        description: 'Непрерывность сервиса после go-live так же важна, как и сам запуск.',
+        points: ['Go-live readiness', 'Структурированный handoff', 'Путь поддержки и дальнейших итераций'],
+      },
+    ],
   },
   techStack: {
     ...en.techStack,

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useSiteContent } from '../../context/SiteContentContext';
 import { FeatureList } from '../ui/FeatureList';
 import { AppLink } from '../ui/AppLink';
@@ -7,6 +8,13 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 export function SolutionsSection() {
   const { content } = useSiteContent();
   const { solutions, ui } = content;
+  const [expandedCards, setExpandedCards] = useState<string[]>([]);
+
+  const toggleCard = (id: string) => {
+    setExpandedCards((current) =>
+      current.includes(id) ? current.filter((item) => item !== id) : [...current, id],
+    );
+  };
 
   return (
     <SectionWrapper id={solutions.id}>
@@ -37,13 +45,23 @@ export function SolutionsSection() {
         </div>
         <div className="solution-cards">
           {solutions.items.map((item) => (
-            <article key={item.id} className="solution-card">
+            <article
+              key={item.id}
+              className={`solution-card ${expandedCards.includes(item.id) ? 'solution-card--expanded' : ''}`}
+            >
               <div className="solution-card__header">
                 <p className="info-card__accent">{item.category}</p>
                 <h3>{item.title}</h3>
                 <p className="solution-card__value">{item.value}</p>
                 <p>{item.description}</p>
               </div>
+              <button
+                type="button"
+                className="solution-card__toggle"
+                onClick={() => toggleCard(item.id)}
+              >
+                {expandedCards.includes(item.id) ? ui.hideDetails : ui.showDetails}
+              </button>
               <div className="solution-card__body">
                 <div>
                   <p className="solution-card__label">For whom</p>

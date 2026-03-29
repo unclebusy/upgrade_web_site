@@ -234,6 +234,15 @@ export type TechStackContent = PlaceholderSectionContent & {
   groups: TechStackGroup[];
 };
 
+export type TrustContent = PlaceholderSectionContent & {
+  note: string;
+  items: Array<{
+    title: string;
+    description: string;
+    points: string[];
+  }>;
+};
+
 export type FinalCtaContent = PlaceholderSectionContent & {
   actions: LinkAction[];
 };
@@ -273,6 +282,8 @@ export type UiContent = {
   exploreLabel: string;
   menuLabel: string;
   closeLabel: string;
+  showDetails: string;
+  hideDetails: string;
   whyItMatters: string;
   portfolioLogic: string;
   hardwareCapability: string;
@@ -352,6 +363,7 @@ export type HomePageContent = {
   infrastructure: InfrastructureContent;
   customers: LogoSectionContent;
   partners: LogoSectionContent;
+  trust: TrustContent;
   techStack: TechStackContent;
   industriesPage: PlaceholderSectionContent & {
     items: ContentCardItem[];
