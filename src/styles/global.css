@@ -1226,14 +1226,21 @@ p {
   align-items: start;
 }
 
-.solutions-layout__lead {
-  display: grid;
+.solutions-layout--tiles {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
-.solution-cards {
-  display: grid;
-  gap: 1.5rem;
+.solutions-layout--tiles > * {
+  min-width: 0;
+}
+
+.solutions-layout--tiles .solutions-lead-card {
+  min-height: 100%;
+}
+
+.solutions-layout--tiles .ecosystem-map {
+  min-height: 100%;
 }
 
 .solution-card {
