@@ -16,6 +16,12 @@ export function ContactForm() {
     setStatusType(null);
 
     const formData = new FormData(event.currentTarget);
+    const website = String(formData.get('website') ?? '');
+
+    if (website.trim()) {
+      setIsSubmitting(false);
+      return;
+    }
 
     try {
       await submitContactForm({
@@ -42,6 +48,11 @@ export function ContactForm() {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="contact-form__signals" aria-label="Contact form signals">
+        {contactForm.helperSignals.map((signal) => (
+          <span key={signal}>{signal}</span>
+        ))}
+      </div>
       <label htmlFor="contact-name">
         {contactForm.name}
         <input
@@ -94,7 +105,10 @@ export function ContactForm() {
       <div className="contact-form__grid">
         <label htmlFor="contact-project-type">
           {contactForm.projectType}
-          <select id="contact-project-type" name="projectType" defaultValue={contactForm.projectTypeOptions[0]}>
+          <select id="contact-project-type" name="projectType" defaultValue="" required>
+            <option value="" disabled>
+              {contactForm.projectTypePlaceholder}
+            </option>
             {contactForm.projectTypeOptions.map((option) => (
               <option key={option} value={option}>
                 {option}
@@ -104,7 +118,10 @@ export function ContactForm() {
         </label>
         <label htmlFor="contact-timeline">
           {contactForm.timeline}
-          <select id="contact-timeline" name="timeline" defaultValue={contactForm.timelineOptions[0]}>
+          <select id="contact-timeline" name="timeline" defaultValue="" required>
+            <option value="" disabled>
+              {contactForm.timelinePlaceholder}
+            </option>
             {contactForm.timelineOptions.map((option) => (
               <option key={option} value={option}>
                 {option}
@@ -123,9 +140,14 @@ export function ContactForm() {
           required
         />
       </label>
+      <label className="contact-form__honeypot" aria-hidden="true" tabIndex={-1}>
+        Website
+        <input type="text" name="website" autoComplete="off" tabIndex={-1} />
+      </label>
       <button type="submit" className="button button--primary" disabled={isSubmitting}>
         {isSubmitting ? contactForm.sending : contactForm.send}
       </button>
+      <p className="contact-form__note">{contactForm.privacyNote}</p>
       {statusMessage ? (
         <p
           className={`form-status form-status--${statusType ?? 'success'}`}

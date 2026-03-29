@@ -308,6 +308,10 @@ export type UiContent = {
     sending: string;
     success: string;
     error: string;
+    projectTypePlaceholder: string;
+    timelinePlaceholder: string;
+    helperSignals: string[];
+    privacyNote: string;
     projectTypeOptions: string[];
     timelineOptions: string[];
     placeholders: {

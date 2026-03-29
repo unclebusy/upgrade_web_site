@@ -41,6 +41,10 @@ const en: HomePageContent = {
       sending: 'Sending...',
       success: 'Your message has been sent. Our team will get back to you shortly.',
       error: 'Unable to send right now. Please try again in a moment.',
+      projectTypePlaceholder: 'Select project type',
+      timelinePlaceholder: 'Select expected timeline',
+      helperSignals: ['Work email preferred', 'Specialist review within 1 business day', 'Direct routing to the right team'],
+      privacyNote: 'Your request is used only to qualify the conversation and route it to the right specialist.',
       projectTypeOptions: [
         'Core banking',
         'Digital banking',
@@ -806,6 +810,10 @@ const ru: HomePageContent = {
       sending: 'Отправка...',
       success: 'Сообщение отправлено. Наша команда свяжется с вами в ближайшее время.',
       error: 'Не удалось отправить сообщение. Попробуйте ещё раз чуть позже.',
+      projectTypePlaceholder: 'Выберите тип проекта',
+      timelinePlaceholder: 'Выберите ожидаемые сроки',
+      helperSignals: ['Предпочтителен рабочий email', 'Ответ специалиста в течение 1 рабочего дня', 'Запрос сразу направляется нужной команде'],
+      privacyNote: 'Запрос используется только для квалификации обращения и передачи его нужному специалисту.',
       projectTypeOptions: [
         'Core banking',
         'Digital banking',
