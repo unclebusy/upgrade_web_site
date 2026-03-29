@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useSiteContent } from '../../context/SiteContentContext';
+import { SeoManager } from '../seo/SeoManager';
 import { Footer } from '../sections/Footer';
 import { Header } from '../sections/Header';
 
@@ -24,6 +25,7 @@ export function SiteLayout() {
 
   return (
     <>
+      <SeoManager />
       <a className="skip-link" href="#main-content">
         {content.ui.skipToContent}
       </a>

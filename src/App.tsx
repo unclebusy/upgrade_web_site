@@ -1,7 +1,6 @@
-import { useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { SiteLayout } from './components/layout/SiteLayout';
-import { SiteContentProvider, useSiteContent } from './context/SiteContentContext';
+import { SiteContentProvider } from './context/SiteContentContext';
 import { AboutPage } from './pages/AboutPage';
 import { ContactPage } from './pages/ContactPage';
 import { CustomersPage } from './pages/CustomersPage';
@@ -39,35 +38,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <SiteContentProvider>
-      <AppRouter />
+      <RouterProvider router={router} />
     </SiteContentProvider>
   );
-}
-
-function AppRouter() {
-  const { content } = useSiteContent();
-  const { siteMeta } = content;
-
-  useEffect(() => {
-    document.title = siteMeta.title;
-
-    const metaUpdates: Array<[string, string, string]> = [
-      ['name', 'description', siteMeta.description],
-      ['property', 'og:title', siteMeta.title],
-      ['property', 'og:description', siteMeta.description],
-      ['name', 'twitter:title', siteMeta.title],
-      ['name', 'twitter:description', siteMeta.description],
-    ];
-
-    metaUpdates.forEach(([attr, key, value]) => {
-      const tag = document.head.querySelector(`meta[${attr}="${key}"]`);
-      if (tag) {
-        tag.setAttribute('content', value);
-      }
-    });
-  }, [siteMeta.description, siteMeta.title]);
-
-  return <RouterProvider router={router} />;
 }
 
 export default App;
