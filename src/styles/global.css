@@ -996,14 +996,6 @@ p {
   padding-top: 3.6rem;
 }
 
-.solutions-preview {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
-  gap: 1.4rem;
-  align-items: start;
-}
-
-.solutions-preview__featured,
 .solutions-preview__card {
   display: grid;
   gap: 0.85rem;
@@ -1014,19 +1006,17 @@ p {
   box-shadow: 0 14px 34px rgba(78, 38, 8, 0.07);
 }
 
-.solutions-preview__featured {
-  padding: 1.8rem;
-}
-
 .solutions-preview__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  align-items: stretch;
 }
 
 .solutions-preview__card {
-  padding: 1.35rem;
+  padding: 1.45rem;
   align-content: start;
+  min-height: 100%;
 }
 
 .solutions-preview__value {
@@ -1052,25 +1042,11 @@ p {
   padding-top: 3.6rem;
 }
 
-.case-preview {
-  display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(0, 0.94fr);
-  gap: 1.35rem;
-  align-items: start;
-}
-
 .case-preview__grid {
   display: grid;
-  gap: 1rem;
-}
-
-.case-preview__featured .case-card__content {
-  gap: 1rem;
-}
-
-.case-preview__card .case-card__content {
-  gap: 0.9rem;
-  padding: 1.35rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  align-items: stretch;
 }
 
 .case-preview__outcome {
@@ -1080,6 +1056,7 @@ p {
 
 .metrics-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .metric-card--feature {
@@ -1126,6 +1103,7 @@ p {
 
 .services-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .services-lanes {
@@ -1133,6 +1111,7 @@ p {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
   margin-bottom: 1.75rem;
+  align-items: stretch;
 }
 
 .lane-card {
@@ -1165,6 +1144,7 @@ p {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+  align-items: stretch;
 }
 
 .trust-card {
@@ -1188,6 +1168,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.2rem;
+  align-items: stretch;
 }
 
 .delivery-step {
@@ -1213,6 +1194,7 @@ p {
 
 .advantages-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .advantages-grid__lead {
@@ -1227,8 +1209,9 @@ p {
 }
 
 .solutions-layout--tiles {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
+  align-items: stretch;
 }
 
 .solutions-layout--tiles > * {
@@ -1241,6 +1224,31 @@ p {
 
 .solutions-layout--tiles .ecosystem-map {
   min-height: 100%;
+}
+
+.journey-grid,
+.proof-grid,
+.infrastructure-grid,
+.tech-stack-grid,
+.logo-grid {
+  align-items: stretch;
+}
+
+.journey-grid > *,
+.proof-grid > *,
+.metrics-grid > *,
+.services-grid > *,
+.services-lanes > *,
+.advantages-grid > *,
+.trust-grid > *,
+.delivery-steps > *,
+.solutions-layout--tiles > *,
+.solutions-preview__grid > *,
+.case-preview__grid > *,
+.infrastructure-grid > *,
+.tech-stack-grid > *,
+.logo-grid > * {
+  height: 100%;
 }
 
 .solution-card {
