@@ -5,7 +5,7 @@ export function ContactPage() {
   return (
     <>
       <PageIntroSection page="contact" />
-      <ContactSection />
+      <ContactSection showHeading={false} pageMode />
     </>
   );
 }

@@ -1475,9 +1475,44 @@ p {
   align-items: start;
 }
 
+.contact-page-section {
+  padding-top: 2.2rem;
+}
+
+.contact-intake-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-intake-strip span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(253, 102, 1, 0.08);
+  color: var(--color-primary-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
 .contact-layout__info {
   display: grid;
   align-content: start;
+}
+
+.contact-layout__intro {
+  display: grid;
+  gap: 0.9rem;
+  max-width: 40rem;
+}
+
+.contact-layout__intro h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  line-height: 1.02;
 }
 
 .solutions-grid {
@@ -1988,14 +2023,35 @@ p {
   gap: 1.75rem;
 }
 
+.case-library--featured {
+  gap: 1.4rem;
+}
+
+.case-library__supporting {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .case-card {
   overflow: hidden;
+}
+
+.case-card--featured {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.92fr) minmax(0, 1.08fr);
+}
+
+.case-card--supporting {
+  display: grid;
+  height: 100%;
 }
 
 .case-card__content {
   display: grid;
   gap: 1.15rem;
   padding: 1.75rem;
+  height: 100%;
 }
 
 .case-card__header,
@@ -2024,6 +2080,7 @@ p {
   color: var(--color-text-muted);
 }
 
+.case-card__summary,
 .case-card__metrics {
   display: flex;
   flex-wrap: wrap;
@@ -2033,9 +2090,32 @@ p {
   border-top: 1px solid rgba(253, 102, 1, 0.08);
 }
 
+.case-card__summary span,
 .case-card__metrics span {
   background: rgba(253, 102, 1, 0.1);
   border-color: rgba(253, 102, 1, 0.14);
+}
+
+.case-card__outcome {
+  color: var(--color-text);
+}
+
+.case-card__details {
+  display: grid;
+  gap: 0.85rem;
+  padding-top: 0.2rem;
+}
+
+.case-card__details summary {
+  cursor: pointer;
+  color: var(--color-primary-strong);
+  font-weight: 700;
+}
+
+.case-card__detail-stack {
+  display: grid;
+  gap: 1rem;
+  padding: 0.9rem 1rem 0;
 }
 
 .case-card .button {
@@ -2469,6 +2549,10 @@ p {
     padding: 1.25rem;
   }
 
+  .case-card--featured {
+    grid-template-columns: 1fr;
+  }
+
   .metrics-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.6rem;
@@ -2497,6 +2581,10 @@ p {
 
   .proof-grid,
   .case-library {
+    margin-top: 1.25rem;
+  }
+
+  .case-library__supporting {
     margin-top: 1.25rem;
   }
 
@@ -2538,12 +2626,20 @@ p {
     display: none;
   }
 
+  .case-library__supporting {
+    grid-template-columns: 1fr;
+  }
+
   .contact-card {
     order: -1;
   }
 
   .contact-layout {
     gap: 1.25rem;
+  }
+
+  .contact-intake-strip {
+    margin-bottom: 1rem;
   }
 
   .cta-group .button--secondary,

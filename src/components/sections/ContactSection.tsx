@@ -4,7 +4,12 @@ import { ContactForm } from '../ui/ContactForm';
 import { SectionHeading } from '../ui/SectionHeading';
 import { SectionWrapper } from '../ui/SectionWrapper';
 
-export function ContactSection() {
+type ContactSectionProps = {
+  showHeading?: boolean;
+  pageMode?: boolean;
+};
+
+export function ContactSection({ showHeading = true, pageMode = false }: ContactSectionProps) {
   const { content, locale } = useSiteContent();
   const { contact, ui } = content;
   const hasRealPhone = !/\b00\b/.test(contact.details.phone);
@@ -12,17 +17,50 @@ export function ContactSection() {
   const businessEmailLabel = locale === 'ru' ? 'Деловой email' : 'Business email';
   const linkedInLabel = 'LinkedIn';
   const companyPageLabel = locale === 'ru' ? 'Страница компании' : 'Company page';
+  const intakeLabel = locale === 'ru' ? 'Enterprise Intake' : 'Enterprise Intake';
+  const intakeTitle =
+    locale === 'ru'
+      ? 'Контактные данные и intake-форма для квалифицированных банковских запросов.'
+      : 'Contact details and intake form for qualified banking requests.';
+  const intakeDescription =
+    locale === 'ru'
+      ? 'Страница сфокусирована на маршрутизации инициатив по core banking, цифровым каналам, onboarding, payments, integration и infrastructure к нужной команде.'
+      : 'This page is designed to route core banking, digital channels, onboarding, payments, integration, and infrastructure programs to the right team.';
+  const intakeSignals = [
+    contact.responseExpectation,
+    contact.details.office,
+    `${businessEmailLabel}: ${contact.details.businessEmail}`,
+  ];
 
   return (
-    <SectionWrapper id={contact.id} surface="muted">
+    <SectionWrapper
+      id={contact.id}
+      surface="muted"
+      className={pageMode ? 'contact-page-section' : undefined}
+    >
+      {pageMode ? (
+        <div className="contact-intake-strip" aria-label={intakeLabel}>
+          {intakeSignals.map((signal) => (
+            <span key={signal}>{signal}</span>
+          ))}
+        </div>
+      ) : null}
       <div className="contact-layout">
-        <div className="contact-layout__info">
-          <SectionHeading
-            eyebrow={contact.eyebrow}
-            title={contact.title}
-            description={contact.description}
-          />
-          {contact.image ? (
+        <div className={`contact-layout__info ${pageMode ? 'contact-layout__info--page' : ''}`}>
+          {showHeading ? (
+            <SectionHeading
+              eyebrow={contact.eyebrow}
+              title={contact.title}
+              description={contact.description}
+            />
+          ) : (
+            <div className="contact-layout__intro">
+              <p className="eyebrow">{intakeLabel}</p>
+              <h2>{intakeTitle}</h2>
+              <p>{intakeDescription}</p>
+            </div>
+          )}
+          {contact.image && !pageMode ? (
             <div className="section-media section-media--contact">
               <img src={contact.image.src} alt={contact.image.alt} />
             </div>
