@@ -1130,10 +1130,87 @@ p {
   padding-top: 3.6rem;
 }
 
+.industries-page-section,
+.infrastructure-page-section {
+  padding-top: 3.6rem;
+}
+
 .services-comparison {
   display: grid;
   gap: 1.75rem;
   margin-top: 2rem;
+}
+
+.industries-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.industries-layout__summary {
+  min-height: 100%;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.industry-card {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1.4rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(253, 102, 1, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 242, 0.98));
+  box-shadow: 0 14px 34px rgba(78, 38, 8, 0.07);
+}
+
+.industry-card__eyebrow {
+  color: var(--color-primary-strong);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.industry-card__cluster {
+  display: grid;
+  gap: 0.35rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(253, 102, 1, 0.08);
+}
+
+.industry-card__cluster span {
+  color: var(--color-primary-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.infrastructure-scenarios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.infrastructure-scenarios span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(253, 102, 1, 0.08);
+  border: 1px solid rgba(253, 102, 1, 0.12);
+  color: var(--color-primary-strong);
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 .services-lanes {
@@ -2215,11 +2292,13 @@ p {
 
   .metrics-strip,
   .about-editorial,
+  .industries-layout,
   .why-choose,
   .why-choose__pillars,
   .solutions-preview,
   .solutions-preview__grid,
-  .case-preview {
+  .case-preview,
+  .industries-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2433,6 +2512,8 @@ p {
   .why-choose-section,
   .about-editorial-section,
   .services-page-section,
+  .industries-page-section,
+  .infrastructure-page-section,
   .solutions-preview-section,
   .case-preview-section {
     padding-top: 2.7rem;
