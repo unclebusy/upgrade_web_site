@@ -1221,7 +1221,7 @@ p {
 
 .solutions-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  grid-template-columns: 1fr;
   gap: 1.85rem;
   align-items: start;
 }
