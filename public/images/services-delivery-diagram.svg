@@ -1,0 +1,33 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" rx="40" fill="#FFF7F1"/>
+  <rect x="120" y="180" width="1360" height="320" rx="32" fill="#FFFFFF" stroke="#F0D7C1"/>
+  <rect x="120" y="590" width="1360" height="320" rx="32" fill="#1F1813"/>
+  <text x="180" y="252" fill="#A84400" font-size="30" font-family="Arial, sans-serif" font-weight="700">Software & Digital Transformation</text>
+  <text x="180" y="664" fill="#FFF7F1" font-size="30" font-family="Arial, sans-serif" font-weight="700">Infrastructure & Operational Enablement</text>
+  <g>
+    <rect x="180" y="320" width="240" height="96" rx="22" fill="#FFF1E6"/>
+    <rect x="468" y="320" width="240" height="96" rx="22" fill="#FFF1E6"/>
+    <rect x="756" y="320" width="240" height="96" rx="22" fill="#FFF1E6"/>
+    <rect x="1044" y="320" width="240" height="96" rx="22" fill="#FFF1E6"/>
+    <text x="248" y="375" fill="#733000" font-size="24" font-family="Arial, sans-serif">Discovery</text>
+    <text x="518" y="375" fill="#733000" font-size="24" font-family="Arial, sans-serif">Architecture</text>
+    <text x="816" y="375" fill="#733000" font-size="24" font-family="Arial, sans-serif">Implementation</text>
+    <text x="1120" y="375" fill="#733000" font-size="24" font-family="Arial, sans-serif">Integration</text>
+  </g>
+  <g>
+    <rect x="180" y="730" width="240" height="96" rx="22" fill="#34271E"/>
+    <rect x="468" y="730" width="240" height="96" rx="22" fill="#34271E"/>
+    <rect x="756" y="730" width="240" height="96" rx="22" fill="#34271E"/>
+    <rect x="1044" y="730" width="240" height="96" rx="22" fill="#34271E"/>
+    <text x="262" y="785" fill="#FFF7F1" font-size="24" font-family="Arial, sans-serif">Rollout</text>
+    <text x="560" y="785" fill="#FFF7F1" font-size="24" font-family="Arial, sans-serif">Support</text>
+    <text x="826" y="785" fill="#FFF7F1" font-size="24" font-family="Arial, sans-serif">Branch Ops</text>
+    <text x="1102" y="785" fill="#FFF7F1" font-size="24" font-family="Arial, sans-serif">Server Readiness</text>
+  </g>
+  <line x1="420" y1="368" x2="468" y2="368" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+  <line x1="708" y1="368" x2="756" y2="368" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+  <line x1="996" y1="368" x2="1044" y2="368" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+  <line x1="420" y1="778" x2="468" y2="778" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+  <line x1="708" y1="778" x2="756" y2="778" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+  <line x1="996" y1="778" x2="1044" y2="778" stroke="#FD6601" stroke-width="8" stroke-linecap="round"/>
+</svg>

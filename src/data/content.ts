@@ -103,8 +103,8 @@ const en: HomePageContent = {
       description:
         'Our software stack is structured to help banks modernize core operations, customer channels, onboarding, payment connectivity, and communication services without creating fragmented delivery tracks.',
       image: {
-        src: '/images/solutions-page-ecosystem.jpg',
-        alt: 'Connected banking software ecosystem visual.',
+        src: '/images/solutions-ecosystem-diagram.svg',
+        alt: 'Connected banking software ecosystem diagram.',
       },
     },
     infrastructure: {
@@ -145,8 +145,8 @@ const en: HomePageContent = {
       description:
         'We approach platforms, integration layers, and infrastructure with an enterprise mindset suited for financial institutions and staged transformation programs.',
       image: {
-        src: '/images/technology-page-architecture.jpg',
-        alt: 'Enterprise technology architecture illustration for banking systems.',
+        src: '/images/technology-architecture-grid.svg',
+        alt: 'Structured banking technology architecture grid.',
       },
     },
     industries: {
@@ -165,8 +165,8 @@ const en: HomePageContent = {
       description:
         'Our service layer helps institutions move from strategy to implementation with clearer architecture, stronger integration discipline, and more dependable rollout planning.',
       image: {
-        src: '/images/services-page-consulting.jpg',
-        alt: 'Consulting and planning session around banking technology delivery.',
+        src: '/images/services-delivery-diagram.svg',
+        alt: 'Banking delivery and operational enablement diagram.',
       },
     },
     caseStudies: {
@@ -208,8 +208,8 @@ const en: HomePageContent = {
       footerItems: ['Core layer', 'Digital channels', 'Integration + infrastructure'],
     },
     image: {
-      src: '/images/core-banking-dashboard.jpg',
-      alt: 'Banking systems dashboard preview representing the connected product stack.',
+      src: '/images/hero-banking-system.svg',
+      alt: 'Banking systems diagram showing connected product, integration, and infrastructure layers.',
     },
   },
   journeys: {
@@ -957,24 +957,24 @@ const ru: HomePageContent = {
     eyebrow: 'Как мы помогаем банкам',
     title: 'Выберите банковскую программу, которую нужно сдвинуть первой.',
     description:
-      'Начните с наиболее критичной части банковского стека и расширяйте программу через согласованный delivery path.',
+      'Начните с наиболее критичной части банковского стека и расширяйте программу через согласованный путь поставки.',
     items: [
       {
         title: 'Модернизировать core banking',
-        description: 'Обновить операционный backbone, от которого зависят продукты, транзакции и обслуживание клиентов.',
+        description: 'Обновить операционную основу, от которой зависят продукты, транзакции и обслуживание клиентов.',
         outcome: 'Меньше фрагментации и более чистая база для будущих каналов и интеграций.',
         href: '/solutions',
       },
       {
         title: 'Запустить цифровые каналы',
-        description: 'Развернуть mobile, internet и onboarding-сценарии, связанные с core-операциями с первого дня.',
-        outcome: 'Более быстрый запуск customer channels и лучшее качество onboarding-потока.',
+        description: 'Развернуть мобильные, интернет- и onboarding-сценарии, связанные с core-операциями с первого дня.',
+        outcome: 'Более быстрый запуск клиентских каналов и лучшее качество onboarding-потока.',
         href: '/solutions',
       },
       {
         title: 'Усилить инфраструктуру и интеграции',
-        description: 'Согласовать branch systems, ATM/POS-среду, server operations и кросс-системные интеграции.',
-        outcome: 'Сильнее операционная непрерывность и выше interoperability между системами.',
+        description: 'Согласовать системы отделений, ATM/POS-среду, серверные контуры и кросс-системные интеграции.',
+        outcome: 'Сильнее операционная непрерывность и выше совместимость между системами.',
         href: '/services',
       },
     ],
@@ -982,12 +982,12 @@ const ru: HomePageContent = {
   about: {
     ...en.about,
     eyebrow: 'О C Technology',
-    title: 'Fintech-инженерная компания, построенная вокруг экспертизы в финансовой индустрии.',
+    title: 'Инженерная fintech-компания с глубокой экспертизой в финансовой индустрии.',
     description:
-      'С 2015 года C Technology помогает банкам и финансовым организациям реализовывать практичные enterprise-технологические программы в области ПО, delivery и инфраструктуры.',
+      'С 2015 года C Technology помогает банкам и финансовым организациям реализовывать практичные технологические программы в области ПО, поставки решений и инфраструктуры.',
     paragraphs: [
-      'Наш фокус не в generic IT. Мы работаем с операционной, сервисной и регуляторной реальностью финансового сектора, помогая организациям запускать и масштабировать продукты с меньшей фрагментацией.',
-      'Штаб-квартира в Бишкеке и филиал в Стамбуле дают нам региональную близость и delivery-подход, подходящий для современных банковских сред.',
+      'Наш фокус не в универсальном IT. Мы работаем с операционной, сервисной и регуляторной реальностью финансового сектора, помогая организациям запускать и масштабировать продукты с меньшей фрагментацией.',
+      'Штаб-квартира в Бишкеке и филиал в Стамбуле дают нам региональную близость и дисциплину поставки, подходящую для современных банковских сред.',
     ],
     highlights: ['Банковское ПО и цифровые каналы', 'IT-консалтинг и системная интеграция', 'Инфраструктура и оборудование'],
   },
@@ -1007,14 +1007,14 @@ const ru: HomePageContent = {
   services: {
     ...en.services,
     eyebrow: 'Модель компетенций',
-    title: 'Цифровая трансформация и операционное enablement, разведённые по смыслу.',
+    title: 'Цифровая трансформация и операционное усиление, разведённые по смыслу.',
     description:
-      'Банкам нужна ясность: где заканчивается product delivery, где начинается интеграция и как инфраструктура поддерживает непрерывность сервиса.',
+      'Банкам нужна ясность: где заканчивается поставка продукта, где начинается интеграция и как инфраструктура поддерживает непрерывность сервиса.',
     items: [
-      { title: 'Software & Digital Transformation', description: 'Core banking, onboarding, цифровые каналы, платежи и notification services в рамках одного продуктового контура.', points: ['Core и digital banking', 'Onboarding и customer channels', 'Payments и communication layers'] },
-      { title: 'Systems Integration', description: 'Архитектура и API-поставка между банковскими системами, card-экосистемами, ERP и внешними сервисами.', points: ['Integration architecture', 'Cross-system orchestration', 'Cleaner interoperability'] },
-      { title: 'Infrastructure & Operational Enablement', description: 'ATM/POS-среда, branch equipment, server readiness и операционная поддержка банковской непрерывности.', points: ['ATM и POS-среда', 'Оборудование отделений и серверные контуры', 'Операционная непрерывность'] },
-      { title: 'Consulting & Governance', description: 'Discovery, архитектура, implementation planning, rollout governance и практическая поддержка регулируемых программ.', points: ['Roadmap и architecture', 'Delivery governance', 'Rollout planning'] },
+      { title: 'Software & Digital Transformation', description: 'Core banking, onboarding, цифровые каналы, платежи и сервисы уведомлений в рамках одного продуктового контура.', points: ['Core и digital banking', 'Onboarding и клиентские каналы', 'Платежи и коммуникационные слои'] },
+      { title: 'Systems Integration', description: 'Архитектура и API-поставка между банковскими системами, карточными экосистемами, ERP и внешними сервисами.', points: ['Интеграционная архитектура', 'Кросс-системная оркестрация', 'Более чистая совместимость систем'] },
+      { title: 'Infrastructure & Operational Enablement', description: 'ATM/POS-среда, оборудование отделений, серверная готовность и операционная поддержка банковской непрерывности.', points: ['ATM и POS-среда', 'Оборудование отделений и серверные контуры', 'Операционная непрерывность'] },
+      { title: 'Consulting & Governance', description: 'Discovery, архитектура, планирование внедрения, rollout governance и практическая поддержка регулируемых программ.', points: ['Roadmap и архитектура', 'Delivery governance', 'Rollout planning'] },
     ],
     lanes: [
       {
@@ -1030,7 +1030,7 @@ const ru: HomePageContent = {
     ],
     deliveryModel: {
       eyebrow: 'Как мы реализуем',
-      title: 'Единый delivery path от discovery до support.',
+      title: 'Единый путь поставки от discovery до support.',
       steps: [
         { title: 'Discovery', description: 'Фиксируем бизнес-объём, ограничения и системный контекст.' },
         { title: 'Architecture', description: 'Определяем целевую архитектуру, границы интеграций и rollout-подход.' },
@@ -1044,9 +1044,9 @@ const ru: HomePageContent = {
   solutions: {
     ...en.solutions,
     eyebrow: 'Ключевые решения',
-    title: 'Решения, упакованные как реальные enterprise-продукты для банков.',
+    title: 'Решения, упакованные как реальные банковские enterprise-продукты.',
     description:
-      'Каждое решение описано через value, use cases, интеграции и ожидаемый операционный результат, а не через абстрактный product copy.',
+      'Каждое решение описано через ценность, use cases, интеграции и ожидаемый операционный результат, а не через абстрактный продуктовый текст.',
     ecosystemTitle: 'Связанная банковская экосистема',
     ecosystemDescription: 'Максимальная ценность возникает, когда эти слои внедряются как одна банковская система, а не как набор отдельных модулей.',
     ecosystemLayers: ['Core Banking', 'Digital Channels', 'Remote Onboarding', 'Payments', 'Notification Layer', 'Integration Layer'],
@@ -1065,8 +1065,8 @@ const ru: HomePageContent = {
         id: 'core-banking',
         category: 'Core Platform',
         title: 'Core Banking System',
-        value: 'Операционный backbone для масштабируемых банковских продуктов и обработки транзакций.',
-        description: 'Для банков, которые модернизируют продуктовые операции, account logic и continuity service.',
+        value: 'Операционная основа для масштабируемых банковских продуктов и обработки транзакций.',
+        description: 'Для банков, которые модернизируют продуктовые операции, логику счетов и непрерывность сервиса.',
         forWhom: 'Розничные и коммерческие банки, уходящие от фрагментированной операционной логики.',
         capabilities: ['Product and account operations', 'Workflow control', 'Operational reporting'],
         useCases: ['Core modernization', 'Process consolidation', 'Platform standardization'],
@@ -1079,12 +1079,12 @@ const ru: HomePageContent = {
         category: 'Digital Channels',
         title: 'Mobile & Internet Banking',
         value: 'Клиентские каналы, изначально связанные с core banking.',
-        description: 'Для банков, которые запускают или обновляют mobile, internet и web self-service сценарии.',
-        forWhom: 'Организации, улучшающие доступ клиентов и ускоряющие digital service rollout.',
+        description: 'Для банков, которые запускают или обновляют мобильные, интернет- и веб-сценарии самообслуживания.',
+        forWhom: 'Организации, улучшающие доступ клиентов и ускоряющие запуск цифровых сервисов.',
         capabilities: ['Mobile banking', 'Internet banking', 'Web portal flows'],
         useCases: ['Channel launch', 'Digital redesign', 'Customer self-service growth'],
         integrations: ['Core banking', 'Notifications', 'Remote onboarding'],
-        outcomes: ['Быстрее запуск customer channels', 'Лучшая continuity между touchpoints', 'Более стабильная digital delivery'],
+        outcomes: ['Быстрее запуск клиентских каналов', 'Лучшая связность между точками контакта', 'Более стабильная цифровая поставка'],
         action: { label: 'Запросить walkthrough', href: '/contact', variant: 'ghost' },
       },
       {
@@ -1092,8 +1092,8 @@ const ru: HomePageContent = {
         category: 'Onboarding',
         title: 'Remote Customer Acquisition',
         value: 'Цифровой onboarding, сокращающий время до активации клиента.',
-        description: 'Для банков, снижающих branch dependency и повышающих эффективность customer acquisition.',
-        forWhom: 'Банки и финансовые организации, расширяющие digital-first account opening.',
+        description: 'Для банков, снижающих зависимость от отделений и повышающих эффективность привлечения клиентов.',
+        forWhom: 'Банки и финансовые организации, расширяющие цифровое открытие счетов.',
         capabilities: ['Remote onboarding', 'Application workflows', 'Customer activation logic'],
         useCases: ['Digital account opening', 'Acquisition expansion', 'Faster KYC-facing journeys'],
         integrations: ['Core banking', 'Digital channels', 'Notification services'],
@@ -1104,8 +1104,8 @@ const ru: HomePageContent = {
         id: 'payments',
         category: 'Payments',
         title: 'Card & Payment Solutions',
-        value: 'Платёжные данные, card integrations и ERP connectivity в одном слое.',
-        description: 'Для банков, которым нужна чище interoperability между card ecosystems и business platforms.',
+        value: 'Платёжные данные, карточные интеграции и ERP connectivity в одном слое.',
+        description: 'Для банков, которым нужна более чистая совместимость между карточными экосистемами и бизнес-платформами.',
         forWhom: 'Организации, усиливающие payment operations и надёжность интеграций.',
         capabilities: ['Card data storage', 'Card system APIs', 'ERP connectivity'],
         useCases: ['Payment system integration', 'Enterprise reconciliation', 'Service expansion'],
@@ -1118,7 +1118,7 @@ const ru: HomePageContent = {
         category: 'Communication Layer',
         title: 'Notification Service',
         value: 'Централизованные транзакционные и сервисные коммуникации по банковскому стеку.',
-        description: 'Для банков, которым нужна единая orchestration customer messaging.',
+        description: 'Для банков, которым нужна единая оркестрация клиентских сообщений.',
         forWhom: 'Организации, масштабирующие alerts, транзакционные сообщения и service communications.',
         capabilities: ['Central message orchestration', 'Transactional alerts', 'Reusable communication flows'],
         useCases: ['Service notifications', 'Transactional alerts', 'Cross-channel messaging'],
@@ -1242,12 +1242,12 @@ const ru: HomePageContent = {
     eyebrow: 'Клиенты',
     title: 'Логотипы клиентов, усиленные короткими proof-карточками.',
     description:
-      'Логотипы дают узнавание, а proof-карточки показывают, какой тип delivery scope стоит за этими отношениями.',
+      'Логотипы дают узнавание, а proof-карточки показывают, какой тип проектного объёма стоит за этими отношениями.',
   },
   partners: {
     ...en.partners,
     eyebrow: 'Партнёры',
-    title: 'Партнёрская модель на стыке delivery, интеграции и технологических экосистем.',
+    title: 'Партнёрская модель на стыке поставки, интеграции и технологических экосистем.',
     description:
       'Мы работаем в тесной связке с банками, технологическими вендорами, интеграционными участниками и enterprise-командами, которым нужна согласованность между несколькими системами и сервисными слоями.',
   },
@@ -1256,13 +1256,13 @@ const ru: HomePageContent = {
     eyebrow: 'Governance & Trust',
     title: 'Операционная дисциплина, которую ожидает enterprise buyer в банковской среде.',
     description:
-      'Этот слой отвечает на вопрос надёжности ещё до старта проекта: как устроено delivery governance, как снижается риск и как выглядит support model.',
-    note: 'Если позже появятся формальные certifications, SLA или security attestations, их можно встроить сюда без переделки структуры.',
+      'Этот слой отвечает на вопрос надёжности ещё до старта проекта: как устроено delivery governance, как снижается риск и как выглядит модель поддержки.',
+    note: 'Если позже появятся формальные сертификации, SLA или security attestations, их можно встроить сюда без переделки структуры.',
     items: [
       {
         title: 'Delivery в регулируемой среде',
         description: 'Программы строятся под финансовые организации с жёсткими операционными и governance-ограничениями.',
-        points: ['Banking-first scoping', 'Контролируемое rollout-планирование', 'Фокус на service continuity'],
+        points: ['Banking-first scoping', 'Контролируемое rollout-планирование', 'Фокус на непрерывности сервиса'],
       },
       {
         title: 'Delivery governance',
@@ -1272,12 +1272,12 @@ const ru: HomePageContent = {
       {
         title: 'Security и access discipline',
         description: 'Работа с системами ведётся с учётом доступа, границ интеграций и рисков для критичных сервисов.',
-        points: ['Role-aware implementation', 'Контроль integration boundaries', 'Дисциплина изменений вокруг критичных систем'],
+        points: ['Role-aware implementation', 'Контроль границ интеграций', 'Дисциплина изменений вокруг критичных систем'],
       },
       {
         title: 'Support model',
         description: 'Непрерывность сервиса после go-live так же важна, как и сам запуск.',
-        points: ['Go-live readiness', 'Структурированный handoff', 'Путь поддержки и дальнейших итераций'],
+        points: ['Go-live readiness', 'Структурированный handoff', 'Путь поддержки и следующих итераций'],
       },
     ],
   },

@@ -1,0 +1,26 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1200" rx="40" fill="#FFF7F1"/>
+  <rect x="140" y="120" width="1320" height="960" rx="28" fill="#FFFFFF"/>
+  <path d="M140 360H1460" stroke="#F1D7C4" stroke-width="4"/>
+  <path d="M140 650H1460" stroke="#F1D7C4" stroke-width="4"/>
+  <path d="M520 120V1080" stroke="#F1D7C4" stroke-width="4"/>
+  <path d="M960 120V1080" stroke="#F1D7C4" stroke-width="4"/>
+  <text x="200" y="220" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Core Systems</text>
+  <text x="580" y="220" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Digital Channels</text>
+  <text x="1010" y="220" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Integration Layer</text>
+  <text x="200" y="510" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Payments</text>
+  <text x="580" y="510" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Notifications</text>
+  <text x="1010" y="510" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Infrastructure</text>
+  <text x="200" y="800" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Governance</text>
+  <text x="580" y="800" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Rollout</text>
+  <text x="1010" y="800" fill="#A84400" font-size="28" font-family="Arial, sans-serif" font-weight="700">Support</text>
+  <rect x="200" y="260" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="580" y="260" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="1010" y="260" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="200" y="550" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="580" y="550" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="1010" y="550" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="200" y="840" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="580" y="840" width="220" height="54" rx="18" fill="#FFF1E6"/>
+  <rect x="1010" y="840" width="220" height="54" rx="18" fill="#FFF1E6"/>
+</svg>
