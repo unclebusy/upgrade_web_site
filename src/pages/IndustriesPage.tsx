@@ -1,4 +1,3 @@
-import { FinalCtaSection } from '../components/sections/FinalCtaSection';
 import { IndustriesSection } from '../components/sections/IndustriesSection';
 import { PageIntroSection } from '../components/sections/PageIntroSection';
 
@@ -7,7 +6,6 @@ export function IndustriesPage() {
     <>
       <PageIntroSection page="industries" />
       <IndustriesSection />
-      <FinalCtaSection />
     </>
   );
 }

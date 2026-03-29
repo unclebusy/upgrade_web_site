@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { useSiteContent } from '../../context/SiteContentContext';
 import { AppLink } from '../ui/AppLink';
 import { SectionHeading } from '../ui/SectionHeading';
@@ -5,93 +6,118 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 
 export function IndustriesSection() {
   const { content, locale } = useSiteContent();
-  const { industriesPage, ui } = content;
-  const segmentSignals =
+  const { industriesPage } = content;
+  const segments =
     locale === 'ru'
       ? [
           {
-            needs: 'Цифровые каналы, onboarding, уведомления, сервисная непрерывность',
-            fit: 'Подходящие решения: digital banking, onboarding, notification layer',
-            href: '/solutions',
+            needs: ['Цифровые каналы', 'Онбординг и активация', 'Непрерывность сервиса'],
+            solutions: ['Mobile & Internet Banking', 'Remote Customer Acquisition', 'Notification Service'],
+            value: 'Помогаем выстроить customer-facing banking stack без разрыва между каналами и backend-логикой.',
           },
           {
-            needs: 'Интеграции, операционная устойчивость, enterprise-ready delivery',
-            fit: 'Подходящие направления: core, payments, systems integration',
-            href: '/services',
+            needs: ['Core-операции', 'Платёжные интеграции', 'Согласованность enterprise-систем'],
+            solutions: ['Core Banking System', 'Card & Payment Solutions'],
+            value: 'Делаем ставку на операционную устойчивость, integration clarity и enterprise-ready delivery.',
           },
           {
-            needs: 'Гибкий цифровой рост без разрозненных систем',
-            fit: 'Подходящие решения: onboarding, customer channels, lighter integration rollout',
-            href: '/solutions',
+            needs: ['Быстрое привлечение', 'Снижение branch dependency', 'Гибкий цифровой рост'],
+            solutions: ['Remote Customer Acquisition', 'Mobile & Internet Banking', 'Notification Service'],
+            value: 'Ускоряем digital-first рост без разрастания разрозненных процессов и каналов.',
           },
           {
-            needs: 'Внутренние программы, shared services, инфраструктурная координация',
-            fit: 'Подходящие направления: consulting, integration, infrastructure enablement',
-            href: '/services',
+            needs: ['Shared services', 'Кросс-системная координация', 'Инфраструктурная готовность'],
+            solutions: ['Core Banking System', 'Card & Payment Solutions'],
+            value: 'Полезно для внутренних банковских программ, где delivery и operations должны двигаться синхронно.',
           },
         ]
       : [
           {
-            needs: 'Digital channels, onboarding, notifications, and service continuity',
-            fit: 'Relevant solutions: digital banking, onboarding, notification layer',
-            href: '/solutions',
+            needs: ['Digital channels', 'Onboarding and activation', 'Service continuity'],
+            solutions: ['Mobile & Internet Banking', 'Remote Customer Acquisition', 'Notification Service'],
+            value: 'Build a customer-facing banking stack without disconnecting channels from backend logic.',
           },
           {
-            needs: 'Integration clarity, operational resilience, and enterprise-ready execution',
-            fit: 'Relevant scope: core, payments, and systems integration',
-            href: '/services',
+            needs: ['Core operations', 'Payment integrations', 'Enterprise system alignment'],
+            solutions: ['Core Banking System', 'Card & Payment Solutions'],
+            value: 'Focus on operational resilience, integration clarity, and enterprise-ready execution.',
           },
           {
-            needs: 'Flexible digital growth without fragmented systems',
-            fit: 'Relevant solutions: onboarding, customer channels, and lighter integration rollout',
-            href: '/solutions',
+            needs: ['Faster acquisition', 'Lower branch dependency', 'Flexible digital growth'],
+            solutions: ['Remote Customer Acquisition', 'Mobile & Internet Banking', 'Notification Service'],
+            value: 'Support digital-first growth without adding fragmented processes and channels.',
           },
           {
-            needs: 'Internal programs, shared services, and infrastructure coordination',
-            fit: 'Relevant scope: consulting, integration, and infrastructure enablement',
-            href: '/services',
+            needs: ['Shared services', 'Cross-system coordination', 'Infrastructure readiness'],
+            solutions: ['Core Banking System', 'Card & Payment Solutions'],
+            value: 'Useful for internal banking programs where delivery and operations need to move together.',
           },
         ];
-  const needsLabel = locale === 'ru' ? 'Typical needs' : 'Typical needs';
-  const fitLabel = locale === 'ru' ? 'Delivery fit' : 'Delivery fit';
-  const actionLabel = locale === 'ru' ? 'Перейти к релевантному направлению' : 'Explore relevant scope';
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeItem = industriesPage.items[activeIndex];
+  const activeSegment = segments[activeIndex];
+  const needsLabel = locale === 'ru' ? 'Типовые задачи' : 'Typical tasks';
+  const solutionsLabel = locale === 'ru' ? 'Подходящие решения' : 'Relevant solutions';
+  const valueLabel = locale === 'ru' ? 'Коммерческая ценность' : 'Commercial value';
+  const ctaLabel = locale === 'ru' ? 'Перейти к решениям' : 'Go to solutions';
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [locale]);
 
   return (
-    <SectionWrapper id={industriesPage.id} className="industries-page-section">
+    <SectionWrapper id={industriesPage.id} className="industries-strategy-section">
       <SectionHeading
         eyebrow={industriesPage.eyebrow}
         title={industriesPage.title}
         description={industriesPage.description}
       />
-      <div className="industries-layout">
-        <div className="industries-layout__summary highlight-panel">
-          <p className="highlight-panel__title">{ui.capabilityArea}</p>
-          <h3>{locale === 'ru' ? 'Где компания особенно сильна' : 'Where the company is strongest'}</h3>
-          <p>
-            {locale === 'ru'
-              ? 'Эта страница должна помогать банковскому buyer быстро понять, в каких институциональных контекстах компания особенно релевантна и какой delivery-path чаще всего подходит.'
-              : 'This page should help banking buyers quickly see which institutional contexts are the strongest fit and which delivery path is typically relevant.'}
-          </p>
-        </div>
-        <div className="industries-grid">
+      <div className="industries-strategy">
+        <div className="industries-strategy__nav" role="tablist" aria-label={industriesPage.title}>
           {industriesPage.items.map((item, index) => (
-            <article key={item.title} className="industry-card">
-              <p className="industry-card__eyebrow">{item.title}</p>
-              <p>{item.description}</p>
-              <div className="industry-card__cluster">
-                <span>{needsLabel}</span>
-                <p>{segmentSignals[index]?.needs}</p>
-              </div>
-              <div className="industry-card__cluster">
-                <span>{fitLabel}</span>
-                <p>{segmentSignals[index]?.fit}</p>
-              </div>
-              <AppLink href={segmentSignals[index]?.href ?? '/solutions'} className="text-link">
-                {actionLabel}
-              </AppLink>
-            </article>
+            <button
+              key={item.title}
+              type="button"
+              className={`industry-tab ${index === activeIndex ? 'industry-tab--active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <span>{item.title}</span>
+              <small>{item.description}</small>
+            </button>
           ))}
         </div>
+        <article className="industry-panel">
+          <div className="industry-panel__hero">
+            <p className="industry-panel__label">{activeItem.title}</p>
+            <h3>{activeItem.description}</h3>
+            <p>{activeSegment.value}</p>
+          </div>
+          <div className="industry-panel__clusters">
+            <div className="industry-panel__cluster">
+              <p className="industry-panel__cluster-label">{needsLabel}</p>
+              <div className="industry-panel__chips">
+                {activeSegment.needs.map((need) => (
+                  <span key={need}>{need}</span>
+                ))}
+              </div>
+            </div>
+            <div className="industry-panel__cluster">
+              <p className="industry-panel__cluster-label">{solutionsLabel}</p>
+              <div className="industry-panel__chips">
+                {activeSegment.solutions.map((solution) => (
+                  <span key={solution}>{solution}</span>
+                ))}
+              </div>
+            </div>
+            <div className="industry-panel__cluster">
+              <p className="industry-panel__cluster-label">{valueLabel}</p>
+              <p>{activeSegment.value}</p>
+            </div>
+          </div>
+          <AppLink href="/solutions" className="button button--ghost">
+            {ctaLabel}
+          </AppLink>
+        </article>
       </div>
     </SectionWrapper>
   );

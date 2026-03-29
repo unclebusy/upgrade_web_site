@@ -31,6 +31,7 @@ export function ContactSection({ showHeading = true, pageMode = false }: Contact
     contact.details.office,
     `${businessEmailLabel}: ${contact.details.businessEmail}`,
   ];
+  const responseLabel = locale === 'ru' ? 'Response model' : 'Response model';
 
   return (
     <SectionWrapper
@@ -107,6 +108,13 @@ export function ContactSection({ showHeading = true, pageMode = false }: Contact
               </p>
             </div>
           </div>
+          {pageMode ? (
+            <div className="contact-trust-band" aria-label={responseLabel}>
+              <span>{contact.responseExpectation}</span>
+              <span>{contact.nextSteps[0]}</span>
+              <span>{contact.nextSteps[1]}</span>
+            </div>
+          ) : null}
         </div>
         <div className="contact-card">
           <h3>{contact.formTitle}</h3>

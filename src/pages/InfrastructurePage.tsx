@@ -1,4 +1,3 @@
-import { FinalCtaSection } from '../components/sections/FinalCtaSection';
 import { InfrastructureSection } from '../components/sections/InfrastructureSection';
 import { PageIntroSection } from '../components/sections/PageIntroSection';
 
@@ -7,7 +6,6 @@ export function InfrastructurePage() {
     <>
       <PageIntroSection page="infrastructure" />
       <InfrastructureSection />
-      <FinalCtaSection />
     </>
   );
 }

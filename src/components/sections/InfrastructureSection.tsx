@@ -1,23 +1,19 @@
 import { useSiteContent } from '../../context/SiteContentContext';
-import { InfoCard } from '../ui/InfoCard';
+import { AppLink } from '../ui/AppLink';
 import { SectionHeading } from '../ui/SectionHeading';
 import { SectionWrapper } from '../ui/SectionWrapper';
 
 export function InfrastructureSection() {
   const { content, locale } = useSiteContent();
-  const { infrastructure, ui } = content;
-  const scenarios =
+  const { infrastructure } = content;
+  const featuredItem = infrastructure.items[0];
+  const supportingItems = infrastructure.items.slice(1);
+  const rolloutLabel = locale === 'ru' ? 'Program rollout' : 'Program rollout';
+  const ctaLabel = locale === 'ru' ? 'Обсудить инфраструктурную программу' : 'Discuss an infrastructure program';
+  const rolloutSteps =
     locale === 'ru'
-      ? [
-          'Развёртывание self-service и branch operations по нескольким локациям',
-          'Поддержка service continuity в физических и backend banking environments',
-          'Координация hardware rollout с operational readiness',
-        ]
-      : [
-          'Self-service and branch operations rollout across multiple locations',
-          'Service continuity support across physical and backend banking environments',
-          'Hardware rollout coordinated with operational readiness',
-        ];
+      ? ['Оценка среды', 'Поставка и координация площадок', 'Операционная готовность']
+      : ['Environment assessment', 'Supply and site coordination', 'Operational readiness'];
 
   return (
     <SectionWrapper id={infrastructure.id} surface="accent" className="infrastructure-page-section">
@@ -26,29 +22,40 @@ export function InfrastructureSection() {
         title={infrastructure.title}
         description={infrastructure.description}
       />
-      <div className="infrastructure-layout">
-        <div className="infrastructure-layout__intro">
-          <p>{infrastructure.intro}</p>
-          <div className="infrastructure-scenarios">
-            {scenarios.map((scenario) => (
-              <span key={scenario}>{scenario}</span>
-            ))}
+      <div className="infrastructure-system">
+        <article className="infrastructure-system__featured">
+          <div className="infrastructure-system__content">
+            <p className="infrastructure-system__label">{featuredItem.title}</p>
+            <h3>{locale === 'ru' ? 'Инфраструктура подаётся как operational program, а не как общий hardware-list.' : 'Infrastructure is framed as an operational program, not a generic hardware list.'}</h3>
+            <p>{infrastructure.intro}</p>
+            <div className="infrastructure-system__rollout">
+              <p className="infrastructure-system__rollout-label">{rolloutLabel}</p>
+              <div className="infrastructure-system__chips">
+                {rolloutSteps.map((step) => (
+                  <span key={step}>{step}</span>
+                ))}
+              </div>
+            </div>
+            <AppLink href="/contact" className="button button--ghost">
+              {ctaLabel}
+            </AppLink>
           </div>
           {infrastructure.image ? (
-            <div className="section-media section-media--infrastructure">
+            <div className="section-media section-media--infrastructure infrastructure-system__media">
               <img src={infrastructure.image.src} alt={infrastructure.image.alt} />
             </div>
           ) : null}
-        </div>
-        <div className="infrastructure-grid">
-          {infrastructure.items.map((item, index) => (
-            <InfoCard
-              key={item.title}
-              title={item.title}
-              description={item.description}
-              accent={ui.hardwareCapability}
-              variant={index === 0 ? 'feature' : index === 3 ? 'signal' : 'compact'}
-            />
+        </article>
+        <div className="infrastructure-system__grid">
+          <article className="infrastructure-category infrastructure-category--feature">
+            <p className="infrastructure-category__label">{featuredItem.title}</p>
+            <p>{featuredItem.description}</p>
+          </article>
+          {supportingItems.map((item) => (
+            <article key={item.title} className="infrastructure-category">
+              <p className="infrastructure-category__label">{item.title}</p>
+              <p>{item.description}</p>
+            </article>
           ))}
         </div>
       </div>

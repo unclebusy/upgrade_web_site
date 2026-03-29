@@ -6,7 +6,7 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 export function CaseStudiesPreviewSection() {
   const { content, locale } = useSiteContent();
   const { caseStudiesPage } = content;
-  const visibleItems = caseStudiesPage.items.slice(0, 3);
+  const [featuredItem, ...supportingItems] = caseStudiesPage.items.slice(0, 3);
   const labels =
     locale === 'ru'
       ? { timeline: 'Сроки', outcome: 'Результат' }
@@ -20,34 +20,49 @@ export function CaseStudiesPreviewSection() {
         title={caseStudiesPage.title}
         description={caseStudiesPage.description}
       />
-      <div className="case-preview__grid">
-        {visibleItems.map((item) => (
-          <article key={item.title} className="case-preview__card case-card">
-            {item.image ? (
+      <div className="case-preview">
+        {featuredItem ? (
+          <article className="case-preview__featured case-card">
+            {featuredItem.image ? (
               <div className="card-media">
-                <img src={item.image.src} alt={item.image.alt} />
+                <img src={featuredItem.image.src} alt={featuredItem.image.alt} />
               </div>
             ) : null}
             <div className="case-card__content">
-              <p className="case-card__label">{item.category}</p>
-              <h3>{item.title}</h3>
-              <p className="case-card__profile">{item.profile}</p>
-              <p>{item.challenge}</p>
+              <p className="case-card__label">{featuredItem.category}</p>
+              <h3>{featuredItem.title}</h3>
+              <p className="case-card__profile">{featuredItem.profile}</p>
+              <p>{featuredItem.challenge}</p>
               <div className="case-card__metrics">
-                <span>{labels.timeline}: {item.timeline}</span>
-                {item.metrics.slice(0, 2).map((metric) => (
+                <span>{labels.timeline}: {featuredItem.timeline}</span>
+                {featuredItem.metrics.slice(0, 2).map((metric) => (
                   <span key={metric}>{metric}</span>
                 ))}
               </div>
               <p className="case-preview__outcome">
-                <strong>{labels.outcome}:</strong> {item.outcome}
+                <strong>{labels.outcome}:</strong> {featuredItem.outcome}
               </p>
               <AppLink href="/case-studies" className="button button--ghost">
                 {caseStudiesPage.ctaLabel ?? defaultCta}
               </AppLink>
             </div>
           </article>
-        ))}
+        ) : null}
+        <div className="case-preview__supporting">
+          {supportingItems.map((item) => (
+            <article key={item.title} className="case-preview__support-card">
+              <p className="case-preview__support-label">{item.category}</p>
+              <h3>{item.title}</h3>
+              <p>{item.challenge}</p>
+              <div className="case-preview__support-chips">
+                <span>{item.timeline}</span>
+                {item.metrics.slice(0, 2).map((metric) => (
+                  <span key={metric}>{metric}</span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );

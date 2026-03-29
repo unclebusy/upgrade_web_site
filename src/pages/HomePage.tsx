@@ -1,27 +1,21 @@
-import { ContactSection } from '../components/sections/ContactSection';
 import { JourneySection } from '../components/sections/JourneySection';
-import { CustomersSection } from '../components/sections/CustomersSection';
 import { CaseStudiesPreviewSection } from '../components/sections/CaseStudiesPreviewSection';
+import { ContactEntrySection } from '../components/sections/ContactEntrySection';
 import { FinalCtaSection } from '../components/sections/FinalCtaSection';
 import { HeroSection } from '../components/sections/HeroSection';
 import { HomeSolutionsPreviewSection } from '../components/sections/HomeSolutionsPreviewSection';
-import { HomeJumpLinksSection } from '../components/sections/HomeJumpLinksSection';
-import { MetricsStripSection } from '../components/sections/MetricsStripSection';
-import { WhyChooseSection } from '../components/sections/WhyChooseSection';
+import { ProofBandSection } from '../components/sections/ProofBandSection';
 
 export function HomePage() {
   return (
     <>
       <HeroSection />
-      <HomeJumpLinksSection />
       <JourneySection />
-      <MetricsStripSection />
       <HomeSolutionsPreviewSection />
-      <CustomersSection />
-      <WhyChooseSection />
+      <ProofBandSection />
       <CaseStudiesPreviewSection />
       <FinalCtaSection />
-      <ContactSection />
+      <ContactEntrySection />
     </>
   );
 }
