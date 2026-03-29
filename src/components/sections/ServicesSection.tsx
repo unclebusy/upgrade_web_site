@@ -9,35 +9,13 @@ export function ServicesSection() {
   const { services } = content;
 
   return (
-    <SectionWrapper id={services.id}>
+    <SectionWrapper id={services.id} className="services-page-section">
       <SectionHeading
         eyebrow={services.eyebrow}
         title={services.title}
         description={services.description}
       />
-      <div className="services-lanes">
-        {services.lanes.map((lane) => (
-          <article key={lane.title} className="lane-card">
-            <p className="lane-card__eyebrow">{services.eyebrow}</p>
-            <h3>{lane.title}</h3>
-            <p>{lane.description}</p>
-            <FeatureList items={lane.points} />
-          </article>
-        ))}
-      </div>
-      <div className="services-grid">
-        {services.items.map((item, index) => (
-          <InfoCard
-            key={item.title}
-            title={item.title}
-            description={item.description}
-            variant={index === 0 ? 'feature' : index === 3 ? 'signal' : 'default'}
-          >
-            <FeatureList items={item.points} />
-          </InfoCard>
-        ))}
-      </div>
-      <div className="delivery-model">
+      <div className="delivery-model delivery-model--primary">
         <div className="delivery-model__intro">
           <p className="eyebrow">{services.deliveryModel.eyebrow}</p>
           <h2>{services.deliveryModel.title}</h2>
@@ -49,6 +27,30 @@ export function ServicesSection() {
               <h3>{step.title}</h3>
               <p>{step.description}</p>
             </article>
+          ))}
+        </div>
+      </div>
+      <div className="services-comparison">
+        <div className="services-lanes">
+          {services.lanes.map((lane) => (
+            <article key={lane.title} className="lane-card">
+              <p className="lane-card__eyebrow">{services.eyebrow}</p>
+              <h3>{lane.title}</h3>
+              <p>{lane.description}</p>
+              <FeatureList items={lane.points} />
+            </article>
+          ))}
+        </div>
+        <div className="services-grid services-grid--capability">
+          {services.items.map((item, index) => (
+            <InfoCard
+              key={item.title}
+              title={item.title}
+              description={item.description}
+              variant={index === 0 ? 'feature' : index === 3 ? 'signal' : 'default'}
+            >
+              <FeatureList items={item.points} />
+            </InfoCard>
           ))}
         </div>
       </div>

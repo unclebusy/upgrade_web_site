@@ -1,4 +1,3 @@
-import { ContactSection } from '../components/sections/ContactSection';
 import { CoreBankingSection } from '../components/sections/CoreBankingSection';
 import { DigitalBankingSection } from '../components/sections/DigitalBankingSection';
 import { FinalCtaSection } from '../components/sections/FinalCtaSection';
@@ -19,7 +18,6 @@ export function SolutionsPage() {
       <PaymentsSection />
       <NotificationSection />
       <FinalCtaSection />
-      <ContactSection />
     </>
   );
 }
