@@ -51,6 +51,10 @@ function joinUrl(path: string) {
   return `${SITE_URL}${path}`;
 }
 
+function hasRealPhone(phone: string) {
+  return !/\b00\b/.test(phone);
+}
+
 function buildPageSeo(pathname: string, locale: 'en' | 'ru', content: ReturnType<typeof useSiteContent>['content']): PageSeo {
   const path = pathname === '/' ? '/' : pathname.replace(/\/+$/, '');
   const isRu = locale === 'ru';
@@ -218,6 +222,7 @@ export function SeoManager() {
     const canonicalUrl = joinUrl(pageSeo.canonicalPath);
     const ogImage = joinUrl(DEFAULT_OG_IMAGE);
     const contact = content.contact.details;
+    const phone = hasRealPhone(contact.phone) ? contact.phone : undefined;
 
     document.title = pageSeo.title;
 
@@ -253,7 +258,7 @@ export function SeoManager() {
       logo: joinUrl('/ctechnology-logo-full.png'),
       image: ogImage,
       email: contact.businessEmail,
-      telephone: contact.phone,
+      ...(phone ? { telephone: phone } : {}),
       sameAs: [contact.linkedin],
       areaServed: ['Kyrgyzstan', 'Turkey'],
       contactPoint: [
@@ -261,7 +266,7 @@ export function SeoManager() {
           '@type': 'ContactPoint',
           contactType: 'sales',
           email: contact.businessEmail,
-          telephone: contact.phone,
+          ...(phone ? { telephone: phone } : {}),
           availableLanguage: ['English', 'Russian'],
           areaServed: ['Kyrgyzstan', 'Turkey'],
         },

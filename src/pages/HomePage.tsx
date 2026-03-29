@@ -1,29 +1,25 @@
 import { ContactSection } from '../components/sections/ContactSection';
 import { JourneySection } from '../components/sections/JourneySection';
 import { CustomersSection } from '../components/sections/CustomersSection';
+import { CaseStudiesPreviewSection } from '../components/sections/CaseStudiesPreviewSection';
 import { FinalCtaSection } from '../components/sections/FinalCtaSection';
 import { HeroSection } from '../components/sections/HeroSection';
+import { HomeSolutionsPreviewSection } from '../components/sections/HomeSolutionsPreviewSection';
 import { HomeJumpLinksSection } from '../components/sections/HomeJumpLinksSection';
-import { MetricsSection } from '../components/sections/MetricsSection';
-import { CaseStudiesSection } from '../components/sections/CaseStudiesSection';
-import { TrustSection } from '../components/sections/TrustSection';
-import { AdvantagesSection } from '../components/sections/AdvantagesSection';
-import { ServicesSection } from '../components/sections/ServicesSection';
-import { SolutionsSection } from '../components/sections/SolutionsSection';
+import { MetricsStripSection } from '../components/sections/MetricsStripSection';
+import { WhyChooseSection } from '../components/sections/WhyChooseSection';
 
 export function HomePage() {
   return (
     <>
       <HeroSection />
       <HomeJumpLinksSection />
-      <MetricsSection />
       <JourneySection />
-      <AdvantagesSection />
-      <SolutionsSection />
-      <ServicesSection />
+      <MetricsStripSection />
+      <HomeSolutionsPreviewSection />
       <CustomersSection />
-      <TrustSection />
-      <CaseStudiesSection />
+      <WhyChooseSection />
+      <CaseStudiesPreviewSection />
       <FinalCtaSection />
       <ContactSection />
     </>

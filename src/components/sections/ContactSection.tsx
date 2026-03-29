@@ -7,6 +7,7 @@ import { SectionWrapper } from '../ui/SectionWrapper';
 export function ContactSection() {
   const { content, locale } = useSiteContent();
   const { contact, ui } = content;
+  const hasRealPhone = !/\b00\b/.test(contact.details.phone);
   const addressLabel = locale === 'ru' ? 'Адрес' : 'Address';
   const businessEmailLabel = locale === 'ru' ? 'Деловой email' : 'Business email';
   const linkedInLabel = 'LinkedIn';
@@ -49,14 +50,16 @@ export function ContactSection() {
                 </AppLink>
               </p>
             </div>
-            <div>
-              <span>{ui.phone}</span>
-              <p>
-                <AppLink href={`tel:${contact.details.phone.replace(/\s+/g, '')}`}>
-                  {contact.details.phone}
-                </AppLink>
-              </p>
-            </div>
+            {hasRealPhone ? (
+              <div>
+                <span>{ui.phone}</span>
+                <p>
+                  <AppLink href={`tel:${contact.details.phone.replace(/\s+/g, '')}`}>
+                    {contact.details.phone}
+                  </AppLink>
+                </p>
+              </div>
+            ) : null}
             <div>
               <span>{linkedInLabel}</span>
               <p>

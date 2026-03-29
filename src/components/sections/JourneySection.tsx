@@ -16,14 +16,14 @@ export function JourneySection() {
       />
       <div className="journey-grid">
         {journeys.items.map((item) => (
-          <article key={item.title} className="journey-card">
+          <AppLink key={item.title} href={item.href} className="journey-card journey-card--link">
             <h3>{item.title}</h3>
             <p>{item.description}</p>
             <p className="journey-card__outcome">{item.outcome}</p>
-            <AppLink href={item.href} className="text-link">
+            <span className="text-link">
               {ui.exploreLabel}
-            </AppLink>
-          </article>
+            </span>
+          </AppLink>
         ))}
       </div>
     </SectionWrapper>
